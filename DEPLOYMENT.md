@@ -23,11 +23,51 @@ The easiest way to deploy is via **GitHub Actions** (already configured).
 
 #### 1. Enable GitHub Actions (One-time setup)
 
+**Option A: If You Have Admin Access**
+
 In your GitHub repository:
 1. Go to **Settings** → **Actions** → **General**
 2. Under "Workflow permissions", select:
    - ✅ **Read and write permissions**
 3. Click **Save**
+
+**Option B: If You Don't Have Admin Access**
+
+You have several alternatives:
+
+**B1: Ask Repository Admin**
+- Ask the repository owner/admin to enable "Read and write permissions" for workflows
+- They can do this in Settings → Actions → General
+
+**B2: Use Personal Access Token (PAT)**
+1. Create a Personal Access Token:
+   - Go to GitHub **Settings** (your profile, not repo) → **Developer settings** → **Personal access tokens** → **Tokens (classic)**
+   - Click **Generate new token (classic)**
+   - Name: "MkDocs Deploy"
+   - Expiration: Choose duration (90 days, 1 year, or no expiration)
+   - Select scopes:
+     - ✅ `repo` (full control of private repositories)
+   - Click **Generate token**
+   - **Copy the token immediately** (you won't see it again!)
+
+2. Add token to repository secrets:
+   - Go to repository **Settings** → **Secrets and variables** → **Actions**
+   - Click **New repository secret**
+   - Name: `GH_DEPLOY_TOKEN`
+   - Value: Paste your token
+   - Click **Add secret**
+
+3. The workflow will automatically use this token (already configured)
+
+**B3: Use Deploy Key (Advanced)**
+- Generate SSH deploy key
+- Add to repository Deploy Keys with write access
+- Update workflow to use the key
+
+**B4: Manual Deployment (No Admin Needed)**
+- Deploy from your local machine using `mkdocs gh-deploy`
+- No GitHub Actions setup required
+- See "Manual Deployment" section below
 
 #### 2. Configure GitHub Pages (One-time setup)
 
