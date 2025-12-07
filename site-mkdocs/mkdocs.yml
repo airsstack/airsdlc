@@ -1,0 +1,116 @@
+site_name: AirSDLC
+site_url: https://airsstack.github.io/airsdlc/
+site_description: The AI-Responsible Software Development Lifecycle - A Framework for AI-Driven Development
+site_author: AirsStack
+repo_name: airsstack/airsdlc
+repo_url: https://github.com/airsstack/airsdlc
+edit_uri: edit/main/docs/
+
+copyright: Copyright &copy; 2025 AirsStack
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep orange
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+  font:
+    text: Inter
+    code: JetBrains Mono
+  
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+plugins:
+  - search:
+      lang: en
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/airsstack
+      name: AirsStack on GitHub
+
+docs_dir: ../docs
+site_dir: site
+
+nav:
+  - Home:
+    - Welcome: index.md
+    - Overview: overview.md
+  
+  - Framework Specification:
+    - Philosophy: philosophy.md
+    - Lifecycle: lifecycle.md
+    - Artifacts: artifacts.md
+    - Workflow: workflow.md
+    - Operations: operations.md
+    - Extensibility: extensibility.md
+  
+  - Reference:
+    - Complete Guide: core.md
+  
+  - Examples:
+    - Examples: examples/README.md
+  
+  - About:
+    - AI-DLC Attribution: AI-DLC-ATTRIBUTION.md
