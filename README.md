@@ -2,6 +2,8 @@
 
 **A Practical Implementation of the AWS AI-DLC Framework**
 
+📚 **[View Documentation](https://airsstack.github.io/airsdlc/)**
+
 AirSDLC is an open-source framework specification that implements and extends the [AI-Driven Development Lifecycle (AI-DLC)](https://aws.amazon.com/blogs/devops/ai-driven-development-life-cycle/) methodology developed by Amazon Web Services. It provides a structured, AI-driven approach to software development, formalizing the principles, artifacts, and workflows that bridge the gap between business requirements and production code.
 
 ## 🎯 What is AirSDLC?
@@ -28,6 +30,8 @@ The framework is built on sequential knowledge handoff across three phases:
 3. **Construction & Operations** - The "BUILD & RUN": Decisions → Production code
 
 ## 📚 Documentation Structure
+
+**[📖 Read the full documentation site](https://airsstack.github.io/airsdlc/)**
 
 The framework is documented in modular, focused chapters:
 
