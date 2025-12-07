@@ -1,0 +1,2527 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The AI-Responsible Software Development Lifecycle - A Framework for AI-Driven Development">
+      
+      
+        <meta name="author" content="AirsStack">
+      
+      
+        <link rel="canonical" href="https://airsstack.github.io/airsdlc/artifacts/">
+      
+      
+        <link rel="prev" href="../lifecycle/">
+      
+      
+        <link rel="next" href="../workflow/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Artifacts - AirSDLC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#airsdlc-artifacts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div class="md-banner">
+  <div class="md-banner__inner md-grid md-typeset">
+    📚 AirSDLC Framework Specification - A comprehensive guide for AI-driven development
+  </div>
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="AirSDLC" class="md-header__button md-logo" aria-label="AirSDLC" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AirSDLC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Artifacts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/airsstack/airsdlc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    airsstack/airsdlc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../philosophy/" class="md-tabs__link">
+          
+  
+  
+  Framework Specification
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../core/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../examples/" class="md-tabs__link">
+          
+  
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../AI-DLC-ATTRIBUTION/" class="md-tabs__link">
+          
+  
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AirSDLC" class="md-nav__button md-logo" aria-label="AirSDLC" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AirSDLC
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/airsstack/airsdlc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    airsstack/airsdlc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Framework Specification
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Framework Specification
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Philosophy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lifecycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Artifacts
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Artifacts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artifact-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Artifact Classification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Artifact Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#by-lifecycle-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        By Lifecycle Phase
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#by-technology-specificity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        By Technology Specificity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-1-artifacts-inception" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1 Artifacts: Inception
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 1 Artifacts: Inception">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-prd-product-requirements-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. PRD (Product Requirements Document)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ai-daa-domain-architecture-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. AI-DAA (Domain Architecture Analysis)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-tip-technical-implementation-proposal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. TIP (Technical Implementation Proposal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-2-artifacts-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2 Artifacts: Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 2 Artifacts: Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-rfc-request-for-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. RFC (Request for Comments)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ai-adr-architectural-decision-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. AI-ADR (Architectural Decision Record)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-architectural-playbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Architectural Playbook
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-3-artifacts-construction-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3 Artifacts: Construction &amp; Operations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 3 Artifacts: Construction &amp; Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7-bolt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Bolt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-deployment-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Deployment Unit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-post-mortem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Post-mortem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-fix-it-bolt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Fix-It Bolt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artifact-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Artifact Relationships
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation Matrix
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extensibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensibility
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complete Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AI-DLC-ATTRIBUTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-DLC Attribution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artifact-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Artifact Classification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Artifact Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#by-lifecycle-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        By Lifecycle Phase
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#by-technology-specificity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        By Technology Specificity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-1-artifacts-inception" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1 Artifacts: Inception
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 1 Artifacts: Inception">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-prd-product-requirements-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. PRD (Product Requirements Document)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ai-daa-domain-architecture-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. AI-DAA (Domain Architecture Analysis)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-tip-technical-implementation-proposal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. TIP (Technical Implementation Proposal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-2-artifacts-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2 Artifacts: Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 2 Artifacts: Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-rfc-request-for-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. RFC (Request for Comments)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ai-adr-architectural-decision-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. AI-ADR (Architectural Decision Record)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-architectural-playbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Architectural Playbook
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-3-artifacts-construction-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3 Artifacts: Construction &amp; Operations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 3 Artifacts: Construction &amp; Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7-bolt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Bolt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-deployment-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Deployment Unit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-post-mortem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Post-mortem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-fix-it-bolt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Fix-It Bolt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artifact-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Artifact Relationships
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation Matrix
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="airsdlc-artifacts">AirSDLC Artifacts<a class="headerlink" href="#airsdlc-artifacts" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Artifacts are the structured data objects that flow through the AirSDLC lifecycle. Each artifact has a specific purpose, defined structure, and clear ownership model. This document provides detailed specifications for each core artifact type.</p>
+<h2 id="artifact-classification">Artifact Classification<a class="headerlink" href="#artifact-classification" title="Permanent link">&para;</a></h2>
+<p>Artifacts can be classified along two dimensions:</p>
+<h3 id="by-lifecycle-phase">By Lifecycle Phase<a class="headerlink" href="#by-lifecycle-phase" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Artifacts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Inception</strong></td>
+<td>PRD, AI-DAA, TIP</td>
+</tr>
+<tr>
+<td><strong>Design</strong></td>
+<td>RFC, AI-ADR, Architectural Playbook</td>
+</tr>
+<tr>
+<td><strong>Construction</strong></td>
+<td>Bolt, Deployment Unit</td>
+</tr>
+<tr>
+<td><strong>Operations</strong></td>
+<td>Post-mortem, Fix-It Bolt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="by-technology-specificity">By Technology Specificity<a class="headerlink" href="#by-technology-specificity" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Classification</th>
+<th>Artifacts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Technology-Agnostic</strong></td>
+<td>PRD, AI-DAA</td>
+</tr>
+<tr>
+<td><strong>Technology-Specific</strong></td>
+<td>TIP, RFC, AI-ADR, Bolt</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="phase-1-artifacts-inception">Phase 1 Artifacts: Inception<a class="headerlink" href="#phase-1-artifacts-inception" title="Permanent link">&para;</a></h2>
+<h3 id="1-prd-product-requirements-document">1. PRD (Product Requirements Document)<a class="headerlink" href="#1-prd-product-requirements-document" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong>: Define the business requirements and success criteria for a feature.</p>
+<p><strong>Generator</strong>: Product Manager (with optional AI assistance)</p>
+<p><strong>Consumers</strong>: Engineering team, AI (for DAA generation)</p>
+<p><strong>Key Characteristics</strong>:
+- Business-focused (minimal technical details)
+- Structured and parseable by AI
+- Contains clear success metrics</p>
+<p><strong>Mandatory Sections</strong>:</p>
+<h4 id="1-feature-overview">1. Feature Overview<a class="headerlink" href="#1-feature-overview" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Title</strong>: Descriptive name</li>
+<li><strong>Objective</strong>: One-paragraph summary of the business goal</li>
+<li><strong>Target Users</strong>: Who will use this feature?</li>
+</ul>
+<h4 id="2-user-stories">2. User Stories<a class="headerlink" href="#2-user-stories" title="Permanent link">&para;</a></h4>
+<p>Format: "As a [role], I want [capability] so that [benefit]"</p>
+<p>Each story must include:
+- <strong>Acceptance Criteria</strong>: Testable conditions for "done"
+- <strong>Priority</strong>: Must-have, should-have, nice-to-have</p>
+<h4 id="3-non-functional-requirements-nfrs">3. Non-Functional Requirements (NFRs)<a class="headerlink" href="#3-non-functional-requirements-nfrs" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Performance</strong>: Response times, throughput requirements</li>
+<li><strong>Availability</strong>: Uptime requirements (e.g., 99.9%)</li>
+<li><strong>Scalability</strong>: Expected load (users, transactions, data volume)</li>
+<li><strong>Security</strong>: Authentication, authorization, data protection</li>
+<li><strong>Compliance</strong>: Regulatory requirements (GDPR, PCI-DSS, etc.)</li>
+</ul>
+<h4 id="4-risk-assessment">4. Risk Assessment<a class="headerlink" href="#4-risk-assessment" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Identified Risks</strong>: What could go wrong?</li>
+<li><strong>Mitigation Strategies</strong>: How to reduce risk</li>
+<li><strong>Assumptions</strong>: What we're assuming to be true</li>
+</ul>
+<h4 id="5-success-metrics">5. Success Metrics<a class="headerlink" href="#5-success-metrics" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Primary KPI</strong>: The main measure of success</li>
+<li><strong>Secondary Metrics</strong>: Supporting indicators</li>
+<li><strong>Measurement Method</strong>: How these will be tracked</li>
+</ul>
+<h4 id="6-constraints">6. Constraints<a class="headerlink" href="#6-constraints" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Timeline</strong>: Deadlines, milestones</li>
+<li><strong>Budget</strong>: Resource limitations</li>
+<li><strong>Technical Constraints</strong>: Must use specific technologies, integrate with existing systems</li>
+<li><strong>Team Constraints</strong>: Available skills, team size</li>
+</ul>
+<p><strong>Example Structure</strong>:
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gh"># PRD: Booking Notes Feature</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gu">## 1. Feature Overview</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">-</span><span class="w"> </span><span class="gs">**Title**</span>: Booking Notes
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">-</span><span class="w"> </span><span class="gs">**Objective**</span>: Allow users to add custom notes to their bookings
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">-</span><span class="w"> </span><span class="gs">**Target Users**</span>: All users with reservations
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="gu">## 2. User Stories</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="gu">### Story 1: Add Notes</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>As a user, I want to add notes to my booking so that I can easily remember important details.
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="gs">**Acceptance Criteria**</span>:
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="k">-</span><span class="w"> </span>User can set notes via mobile app
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="k">-</span><span class="w"> </span>Notes are 1-200 characters
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="k">-</span><span class="w"> </span>Notes are displayed in booking details
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="k">-</span><span class="w"> </span>User can change notes anytime
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="gs">**Priority**</span>: Must-have
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="gu">## 3. Non-Functional Requirements</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="k">-</span><span class="w"> </span><span class="gs">**Performance**</span>: Notes save &lt; 500ms
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="k">-</span><span class="w"> </span><span class="gs">**Availability**</span>: 99.9% uptime
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="k">-</span><span class="w"> </span><span class="gs">**Security**</span>: Notes are user-specific (no cross-user access)
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="gu">## 4. Risks</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="k">-</span><span class="w"> </span><span class="gs">**Risk**</span>: Inappropriate content in notes
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="k">-</span><span class="w"> </span><span class="gs">**Mitigation**</span>: Implement content moderation filter
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="gu">## 5. Success Metrics</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="k">-</span><span class="w"> </span><span class="gs">**Primary KPI**</span>: 40% of users add notes within 30 days
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="k">-</span><span class="w"> </span><span class="gs">**Secondary**</span>: &lt; 1% support tickets related to notes feature
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="gu">## 6. Constraints</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="k">-</span><span class="w"> </span><span class="gs">**Timeline**</span>: Must launch in 2 weeks
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="k">-</span><span class="w"> </span><span class="gs">**Technical**</span>: Must integrate with existing booking service API
+</span></code></pre></div></p>
+<hr />
+<h3 id="2-ai-daa-domain-architecture-analysis">2. AI-DAA (Domain Architecture Analysis)<a class="headerlink" href="#2-ai-daa-domain-architecture-analysis" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong>: Provide a pure, technology-agnostic model of the business domain using Domain-Driven Design patterns.</p>
+<p><strong>Generator</strong>: AI (from PRD input)</p>
+<p><strong>Validators</strong>: Domain experts, architects, senior engineers</p>
+<p><strong>Consumers</strong>: Engineers (for design), AI (for ADR generation)</p>
+<p><strong>Key Characteristics</strong>:
+- 100% technology-neutral (no databases, languages, frameworks)
+- Uses DDD patterns consistently
+- Written in clear pseudocode
+- Every business invariant is explicit</p>
+<p><strong>Mandatory Sections</strong>:</p>
+<h4 id="1-strategic-design">1. Strategic Design<a class="headerlink" href="#1-strategic-design" title="Permanent link">&para;</a></h4>
+<p><strong>1.1 Bounded Contexts</strong>
+Define logical boundaries for different parts of the domain.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>BOUNDED_CONTEXT: Booking Management
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  RESPONSIBILITY: 
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    - Booking lifecycle management
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    - Booking state transitions
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    - Booking-level business rules
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  UBIQUITOUS_LANGUAGE:
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    - Booking: A reservation for a room or resource
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    - BookingStatus: confirmed | cancelled | completed
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    - Cancel: Termination of a confirmed booking
+</span></code></pre></div>
+<p><strong>1.2 Context Map</strong>
+Define relationships between Bounded Contexts.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>CONTEXT_MAP:
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  [Booking Management] --publishes events--&gt; [Notification Service]
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  [Booking Management] --queries--&gt; [User Service]
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  [Booking Management] &lt;--ACL-- [External Property Management System]
+</span></code></pre></div>
+<h4 id="2-tactical-design">2. Tactical Design<a class="headerlink" href="#2-tactical-design" title="Permanent link">&para;</a></h4>
+<p><strong>2.1 Aggregates</strong>
+Define consistency boundaries with a root entity.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>AGGREGATE: Booking
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  AGGREGATE_ROOT: Booking
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    IDENTITY: booking_id (UUID)
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    ATTRIBUTES:
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>      user_id: UserID (reference to User aggregate)
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>      status: BookingStatus (value object)
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>      confirmation_code: ConfirmationCode (value object)
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>      room_details: RoomDetails (value object)
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>      created_at: Timestamp
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>      updated_at: Timestamp
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    INVARIANTS:
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>      - confirmation_code must be unique across all bookings
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>      - status transitions must follow state machine
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>      - only confirmed bookings can be cancelled
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>      - completed bookings are terminal (no further transitions)
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    OPERATIONS:
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>      create(user_id, room_id, dates) → BookingConfirmed
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>        PRECONDITION: user exists and room is available
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>        POSTCONDITION: booking.status = confirmed
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>        DOMAIN_EVENT: BookingConfirmed
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>      cancel(reason) → BookingCancelled
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>        PRECONDITION: status = confirmed
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>        POSTCONDITION: status = cancelled
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>        DOMAIN_EVENT: BookingCancelled
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>      complete() → BookingCompleted
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>        PRECONDITION: status = confirmed AND check-out date passed
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>        POSTCONDITION: status = completed
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>        DOMAIN_EVENT: BookingCompleted
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>      modify(new_dates) → BookingModified
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>        PRECONDITION: status = confirmed
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>        POSTCONDITION: dates updated, status remains confirmed
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>        DOMAIN_EVENT: BookingModified
+</span></code></pre></div>
+<p><strong>2.2 Value Objects</strong>
+Immutable objects defined by their attributes.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>VALUE_OBJECT: BookingStatus
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  ALLOWED_VALUES: [confirmed, cancelled, completed]
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  OPERATIONS:
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    can_transition_to(new_status) → Boolean
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>      RULES:
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        confirmed → cancelled: YES
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        confirmed → completed: YES
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        cancelled → *: NO
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>        completed → *: NO
+</span></code></pre></div>
+<p><strong>2.3 Domain Events</strong>
+Significant occurrences in the domain.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>DOMAIN_EVENT: BookingCancelled
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  ATTRIBUTES:
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    booking_id: UUID
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    reason: String
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    cancelled_at: Timestamp
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    cancelled_by: UserID
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>  CONSUMERS:
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    - Notification Service (send alert to user)
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    - Analytics Service (track cancellation reasons)
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    - Audit Log (compliance)
+</span></code></pre></div>
+<p><strong>2.4 Domain Services</strong>
+Operations that don't naturally belong to a single Aggregate.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>DOMAIN_SERVICE: BookingReservationService
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>  OPERATION: create_booking(user_id, room_id, dates) → Result&lt;Booking, ReservationError&gt;
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    STEPS:
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>      1. Verify user exists and is eligible
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>      2. Check room availability for dates
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>      3. Generate unique confirmation_code
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>      4. Create Booking aggregate
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>      5. Publish BookingConfirmed event
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>      6. Return Booking or ReservationError
+</span></code></pre></div>
+<p><strong>Validation Checklist for AI-DAA</strong>:
+- [ ] Every user story from PRD maps to at least one operation
+- [ ] All business invariants are explicitly stated
+- [ ] No technology-specific terms (databases, APIs, frameworks)
+- [ ] Aggregates have clear boundaries (no god objects)
+- [ ] Domain events are named in past tense
+- [ ] Value objects are immutable
+- [ ] State machines are fully specified</p>
+<hr />
+<h3 id="3-tip-technical-implementation-proposal">3. TIP (Technical Implementation Proposal)<a class="headerlink" href="#3-tip-technical-implementation-proposal" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong>: Engineer's initial technical proposal for simple, well-understood features (Lightweight Workflow alternative to AI-DAA).</p>
+<p><strong>Generator</strong>: Engineer</p>
+<p><strong>Validators</strong>: Peer engineers, architect (in design review)</p>
+<p><strong>Consumers</strong>: Design team (for RFC creation)</p>
+<p><strong>Key Characteristics</strong>:
+- Technology-specific (mentions actual databases, APIs, frameworks)
+- More concrete and direct than DAA
+- Suitable for simple features where domain modeling is overkill</p>
+<p><strong>Suggested Sections</strong>:</p>
+<h4 id="1-context">1. Context<a class="headerlink" href="#1-context" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Link to PRD</li>
+<li>Brief summary of the feature</li>
+</ul>
+<h4 id="2-proposed-implementation">2. Proposed Implementation<a class="headerlink" href="#2-proposed-implementation" title="Permanent link">&para;</a></h4>
+<p><strong>2.1 Database Changes</strong>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">-- Example: Add notes column</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">bookings</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">notes</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_bookings_user_id</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">bookings</span><span class="p">(</span><span class="n">user_id</span><span class="p">);</span>
+</span></code></pre></div></p>
+<p><strong>2.2 API Changes</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>PUT /v1/bookings/{booking_id}/notes
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Request:
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>  {
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    &quot;notes&quot;: &quot;Ground floor room preferred&quot;
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>  }
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>Response:
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>  200 OK
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>  {
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    &quot;booking_id&quot;: &quot;123&quot;,
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    &quot;notes&quot;: &quot;Ground floor room preferred&quot;
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>  }
+</span></code></pre></div></p>
+<p><strong>2.3 Service Logic</strong>
+- Update <code>BookingService.setNotes()</code> method
+- Add validation: 1-200 characters, no special characters
+- Audit log notes changes</p>
+<p><strong>2.4 Testing</strong>
+- Unit tests for validation logic
+- Integration test for full API flow
+- Edge case: Set notes to existing value (idempotent)</p>
+<h4 id="3-open-questions">3. Open Questions<a class="headerlink" href="#3-open-questions" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Do we need to audit-log notes changes for compliance?</li>
+<li>Should notes be searchable?</li>
+</ul>
+<h4 id="4-effort-estimate">4. Effort Estimate<a class="headerlink" href="#4-effort-estimate" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Implementation: 4 hours</li>
+<li>Testing: 2 hours</li>
+<li>Code review: 1 hour</li>
+</ul>
+<p><strong>When to Use TIP vs. AI-DAA</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Use TIP When</th>
+<th>Use AI-DAA When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feature is simple CRUD</td>
+<td>Feature has complex business rules</td>
+</tr>
+<tr>
+<td>Domain is well-understood</td>
+<td>Domain is unfamiliar</td>
+</tr>
+<tr>
+<td>Implementation is obvious</td>
+<td>Multiple approaches possible</td>
+</tr>
+<tr>
+<td>Timeline is tight</td>
+<td>High-risk or critical feature</td>
+</tr>
+<tr>
+<td>Feature touches 1-2 services</td>
+<td>Feature spans multiple bounded contexts</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="phase-2-artifacts-design">Phase 2 Artifacts: Design<a class="headerlink" href="#phase-2-artifacts-design" title="Permanent link">&para;</a></h2>
+<h3 id="4-rfc-request-for-comments">4. RFC (Request for Comments)<a class="headerlink" href="#4-rfc-request-for-comments" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong>: Formalize a design proposal and facilitate collaborative review.</p>
+<p><strong>Generator</strong>: Engineer (assembles from DAA/TIP + own thoughts)</p>
+<p><strong>Validators</strong>: Team (architects, senior engineers, domain experts)</p>
+<p><strong>Consumers</strong>: Design reviewers, AI (for generating ADR)</p>
+<p><strong>Key Characteristics</strong>:
+- Forum for discussion (not finalized)
+- Contains both domain understanding (DAA/TIP) and proposed technical approach
+- Explicitly lists open questions and constraints</p>
+<p><strong>Mandatory Sections</strong>:</p>
+<h4 id="1-metadata">1. Metadata<a class="headerlink" href="#1-metadata" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>RFC Number</strong>: Sequential (e.g., RFC-042)</li>
+<li><strong>Title</strong>: Descriptive name</li>
+<li><strong>Author</strong>: Who wrote this</li>
+<li><strong>Status</strong>: Draft | Under Review | Approved | Rejected | Superseded</li>
+<li><strong>Created</strong>: Date</li>
+<li><strong>Last Updated</strong>: Date</li>
+</ul>
+<h4 id="2-context-problem-statement">2. Context &amp; Problem Statement<a class="headerlink" href="#2-context-problem-statement" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Link to PRD</strong>: Traceability to business requirements</li>
+<li><strong>Problem Summary</strong>: What we're trying to solve</li>
+<li><strong>Domain Model</strong> (if Full Workflow): Link to or embed AI-DAA</li>
+<li><strong>Technical Context</strong>: Existing system, constraints</li>
+</ul>
+<h4 id="3-proposed-solution">3. Proposed Solution<a class="headerlink" href="#3-proposed-solution" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>High-Level Approach</strong>: Overall strategy</li>
+<li><strong>Component Design</strong>: Services, APIs, data models</li>
+<li><strong>Technology Choices</strong>: Databases, frameworks, third-party services</li>
+<li><strong>Integration Points</strong>: How this fits with existing systems</li>
+<li><strong>Diagrams</strong>: Architecture diagrams, sequence diagrams (use diagrams-as-code)</li>
+</ul>
+<h4 id="4-alternatives-considered">4. Alternatives Considered<a class="headerlink" href="#4-alternatives-considered" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Alternative 1</strong>: Approach 2, why rejected</li>
+<li><strong>Alternative 2</strong>: Approach 3, why rejected</li>
+</ul>
+<h4 id="5-trade-offs-risks">5. Trade-offs &amp; Risks<a class="headerlink" href="#5-trade-offs-risks" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Pro</strong>: Benefits of this approach</li>
+<li><strong>Con</strong>: Drawbacks or limitations</li>
+<li><strong>Risks</strong>: What could go wrong</li>
+<li><strong>Mitigations</strong>: How to reduce risks</li>
+</ul>
+<h4 id="6-open-questions">6. Open Questions<a class="headerlink" href="#6-open-questions" title="Permanent link">&para;</a></h4>
+<ul>
+<li>What decisions need input from others?</li>
+<li>What unknowns need investigation?</li>
+</ul>
+<h4 id="7-edge-cases-non-functional-considerations">7. Edge Cases &amp; Non-Functional Considerations<a class="headerlink" href="#7-edge-cases-non-functional-considerations" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Performance</strong>: How will this scale?</li>
+<li><strong>Security</strong>: What are the security implications?</li>
+<li><strong>Failure Modes</strong>: What happens when things go wrong?</li>
+<li><strong>Monitoring</strong>: How will we observe this in production?</li>
+</ul>
+<p><strong>RFC Evolution</strong>:
+1. <strong>Draft</strong>: Initial proposal
+2. <strong>Under Review</strong>: Team is discussing
+3. <strong>Approved</strong>: Design is finalized → Generate AI-ADR
+4. <strong>Rejected</strong>: Not moving forward
+5. <strong>Superseded</strong>: Replaced by newer RFC</p>
+<hr />
+<h3 id="5-ai-adr-architectural-decision-record">5. AI-ADR (Architectural Decision Record)<a class="headerlink" href="#5-ai-adr-architectural-decision-record" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong>: Immutable record of a finalized architectural decision. This is the executable specification for implementation.</p>
+<p><strong>Generator</strong>: AI (after Collaborative Design session)</p>
+<p><strong>Validators</strong>: Architect, senior engineer</p>
+<p><strong>Consumers</strong>: Engineers (for implementation), AI (for code generation), Operations (for context)</p>
+<p><strong>Key Characteristics</strong>:
+- Final and immutable (amendments create new ADRs)
+- Links back to DAA to show domain alignment
+- Contains enough detail to guide implementation
+- Explicitly documents trade-offs</p>
+<p><strong>Mandatory Sections</strong>:</p>
+<h4 id="1-metadata_1">1. Metadata<a class="headerlink" href="#1-metadata_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>ADR Number</strong>: Sequential (e.g., ADR-023)</li>
+<li><strong>Title</strong>: Short, descriptive</li>
+<li><strong>Status</strong>: Proposed | Accepted | Deprecated | Superseded</li>
+<li><strong>Date</strong>: When finalized</li>
+<li><strong>Context Links</strong>:</li>
+<li>PRD: [link]</li>
+<li>DAA: [link] (if applicable)</li>
+<li>RFC: [link]</li>
+</ul>
+<h4 id="2-context">2. Context<a class="headerlink" href="#2-context" title="Permanent link">&para;</a></h4>
+<p>What is the problem or feature we're designing?</p>
+<p><strong>Example</strong>:</p>
+<blockquote>
+<p>We are implementing the Booking Cancellation feature as defined in PRD-015. The AI-DAA identified the <code>Booking.cancel()</code> operation as a state transition that must preserve domain invariants (only confirmed bookings can be cancelled). We need to decide how to implement this in a way that guarantees consistency and reliable event delivery.</p>
+</blockquote>
+<h4 id="3-decision">3. Decision<a class="headerlink" href="#3-decision" title="Permanent link">&para;</a></h4>
+<p>A clear, concise statement of the chosen approach.</p>
+<p><strong>Example</strong>:</p>
+<blockquote>
+<p>We will implement the Booking Cancellation feature as follows:
+1. Use a synchronous database transaction to update booking status
+2. Employ the Transactional Outbox Pattern to publish <code>BookingCancelled</code> events
+3. A separate worker will relay events from the outbox to Kafka
+4. The Notification Service will consume events asynchronously</p>
+</blockquote>
+<h4 id="4-rationale">4. Rationale<a class="headerlink" href="#4-rationale" title="Permanent link">&para;</a></h4>
+<p>Why was this decision made? What were the constraints?</p>
+<p><strong>Example</strong>:</p>
+<blockquote>
+<ul>
+<li>The DAA specifies that only confirmed bookings can be cancelled (invariant)</li>
+<li>We need guaranteed event delivery for compliance (NFR from PRD)</li>
+<li>Synchronous external calls were rejected due to failure coupling risk</li>
+<li>The Transactional Outbox Pattern (from Playbook entry "OUTBOX-001") provides atomicity between database write and event publish</li>
+<li>Trade-off: Slight latency in event delivery is acceptable per PRD requirements</li>
+</ul>
+</blockquote>
+<h4 id="5-implementation-details">5. Implementation Details<a class="headerlink" href="#5-implementation-details" title="Permanent link">&para;</a></h4>
+<p><strong>5.1 Technology Choices</strong>
+- Language: Go 1.21
+- Database: PostgreSQL 15
+- Message Broker: Kafka 3.5
+- Framework: Standard library + custom DDD patterns</p>
+<p><strong>5.2 Database Schema</strong>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">bookings</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="n">booking_id</span><span class="w"> </span><span class="n">UUID</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="n">user_id</span><span class="w"> </span><span class="n">UUID</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="n">status</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">CHECK</span><span class="w"> </span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;confirmed&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;cancelled&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;completed&#39;</span><span class="p">)),</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">  </span><span class="n">created_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">  </span><span class="n">updated_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="p">);</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">booking_outbox</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="n">BIGSERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">  </span><span class="n">aggregate_id</span><span class="w"> </span><span class="n">UUID</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">  </span><span class="n">event_type</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">  </span><span class="n">event_payload</span><span class="w"> </span><span class="n">JSONB</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">  </span><span class="n">created_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">NOW</span><span class="p">(),</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">  </span><span class="n">processed_at</span><span class="w"> </span><span class="k">TIMESTAMP</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="p">);</span>
+</span></code></pre></div></p>
+<p><strong>5.3 API Contract</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>POST /v1/bookings/{booking_id}/cancel
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Authorization: Bearer &lt;token&gt;
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>Request:
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>{
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>  &quot;reason&quot;: &quot;Plans changed&quot;
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>}
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>Response:
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>200 OK
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>{
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>  &quot;booking_id&quot;: &quot;a1b2c3d4&quot;,
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>  &quot;status&quot;: &quot;cancelled&quot;,
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>  &quot;cancelled_at&quot;: &quot;2024-01-15T10:30:00Z&quot;
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>}
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>Errors:
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>400 Bad Request - Invalid booking state
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>404 Not Found - Booking does not exist
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>403 Forbidden - User does not own booking
+</span></code></pre></div></p>
+<p><strong>5.4 Sequence Diagram</strong>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Client
+    participant API
+    participant BookingService
+    participant DB
+    participant Outbox Worker
+    participant Kafka
+
+    Client-&gt;&gt;API: POST /bookings/{id}/cancel
+    API-&gt;&gt;BookingService: cancel_booking(id, reason)
+    BookingService-&gt;&gt;DB: BEGIN TRANSACTION
+    BookingService-&gt;&gt;DB: UPDATE bookings SET status='cancelled'
+    BookingService-&gt;&gt;DB: INSERT INTO booking_outbox (BookingCancelled event)
+    BookingService-&gt;&gt;DB: COMMIT
+    BookingService--&gt;&gt;API: Success
+    API--&gt;&gt;Client: 200 OK
+
+    Outbox Worker-&gt;&gt;DB: SELECT unprocessed events
+    Outbox Worker-&gt;&gt;Kafka: Publish BookingCancelled
+    Kafka--&gt;&gt;Outbox Worker: ACK
+    Outbox Worker-&gt;&gt;DB: UPDATE processed_at</code></pre></p>
+<h4 id="6-edge-cases-failure-handling">6. Edge Cases &amp; Failure Handling<a class="headerlink" href="#6-edge-cases-failure-handling" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Idempotency</strong>: Cancelling an already-cancelled booking returns success (idempotent)</li>
+<li><strong>Concurrent Cancellations</strong>: Database-level status check prevents race conditions</li>
+<li><strong>Outbox Relay Failure</strong>: Worker retries up to 3 times, then moves to dead-letter queue</li>
+<li><strong>Kafka Unavailable</strong>: Events accumulate in outbox, processed when Kafka recovers</li>
+</ul>
+<h4 id="7-monitoring-observability">7. Monitoring &amp; Observability<a class="headerlink" href="#7-monitoring-observability" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Metrics</strong>:</li>
+<li><code>booking_cancellation_requests_total</code> (counter)</li>
+<li><code>booking_cancellation_duration_seconds</code> (histogram)</li>
+<li><code>outbox_pending_events</code> (gauge)</li>
+<li><strong>Alerts</strong>:</li>
+<li>Outbox size &gt; 10,000 events (indicates relay failure)</li>
+<li>Cancellation API error rate &gt; 1%</li>
+</ul>
+<h4 id="8-rejected-alternatives">8. Rejected Alternatives<a class="headerlink" href="#8-rejected-alternatives" title="Permanent link">&para;</a></h4>
+<p><strong>Alternative 1: Synchronous HTTP call to Notification Service</strong>
+- <strong>Rejected because</strong>: Creates tight coupling; booking cancellation fails if notification service is down
+- <strong>Trade-off</strong>: Synchronous call would be simpler but violates availability NFR</p>
+<p><strong>Alternative 2: Direct Kafka publish (without outbox)</strong>
+- <strong>Rejected because</strong>: No atomicity guarantee between DB write and event publish
+- <strong>Trade-off</strong>: Slightly less complex, but risk of data inconsistency</p>
+<h4 id="9-references">9. References<a class="headerlink" href="#9-references" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Playbook Entry: OUTBOX-001 (Transactional Outbox Pattern)</li>
+<li>PRD: PRD-015 (Booking Management Features)</li>
+<li>DAA: Section 3.2 (Booking Aggregate)</li>
+</ul>
+<p><strong>ADR Lifecycle</strong>:
+- <strong>Proposed</strong>: Draft awaiting approval
+- <strong>Accepted</strong>: Approved, ready for implementation
+- <strong>Deprecated</strong>: No longer used but kept for historical record
+- <strong>Superseded</strong>: Replaced by a newer ADR (link to replacement)</p>
+<hr />
+<h3 id="6-architectural-playbook">6. Architectural Playbook<a class="headerlink" href="#6-architectural-playbook" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong>: A living library of approved architectural patterns and solutions to common cross-cutting concerns.</p>
+<p><strong>Generator</strong>: Architects, senior engineers (collaboratively)</p>
+<p><strong>Validators</strong>: Architecture review board</p>
+<p><strong>Consumers</strong>: Engineers (during design), AI (as knowledge base for sparring)</p>
+<p><strong>Key Characteristics</strong>:
+- Curated, vetted patterns only
+- Self-contained entries
+- Explicitly documents trade-offs</p>
+<p><strong>Structure of a Playbook Entry</strong>:</p>
+<h4 id="entry-metadata">Entry Metadata<a class="headerlink" href="#entry-metadata" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Pattern ID</strong>: OUTBOX-001</li>
+<li><strong>Name</strong>: Transactional Outbox Pattern</li>
+<li><strong>Category</strong>: Event-Driven Architecture</li>
+<li><strong>Status</strong>: Active | Deprecated</li>
+</ul>
+<h4 id="1-problem">1. Problem<a class="headerlink" href="#1-problem" title="Permanent link">&para;</a></h4>
+<p>What recurring problem does this solve?</p>
+<p><strong>Example</strong>:</p>
+<blockquote>
+<p>How do we guarantee atomicity between a database write and publishing an asynchronous message? Direct Kafka publishing from application code risks data inconsistency if the publish fails after the DB commit.</p>
+</blockquote>
+<h4 id="2-context_1">2. Context<a class="headerlink" href="#2-context_1" title="Permanent link">&para;</a></h4>
+<p>When should this pattern be used? When should it NOT be used?</p>
+<p><strong>Example</strong>:</p>
+<blockquote>
+<p><strong>Use when</strong>:
+- You need guaranteed at-least-once event delivery
+- You're using a relational database
+- Event order matters</p>
+<p><strong>Do NOT use when</strong>:
+- You can tolerate event loss
+- You need real-time streaming (&lt; 100ms latency)
+- You don't have transactional database support</p>
+</blockquote>
+<h4 id="3-solution">3. Solution<a class="headerlink" href="#3-solution" title="Permanent link">&para;</a></h4>
+<p>Detailed implementation guide.</p>
+<p><strong>Example</strong>:</p>
+<blockquote>
+<ol>
+<li>Within the same database transaction that modifies domain data, insert an event record into an "outbox" table</li>
+<li>A separate worker process polls the outbox table for unprocessed events</li>
+<li>Worker publishes events to message broker (Kafka, RabbitMQ)</li>
+<li>Upon successful publish, worker marks the event as processed</li>
+</ol>
+</blockquote>
+<p><strong>Reference Architecture</strong>:
+<pre class="mermaid"><code>graph LR
+    Service[Domain Service] --&gt;|1. DB Transaction| DB[(Database)]
+    Service --&gt;|2. Write Event| Outbox[Outbox Table]
+    Worker[Outbox Worker] --&gt;|3. Poll| Outbox
+    Worker --&gt;|4. Publish| Kafka[Message Broker]
+    Worker --&gt;|5. Mark Processed| Outbox</code></pre></p>
+<h4 id="4-implementation-checklist">4. Implementation Checklist<a class="headerlink" href="#4-implementation-checklist" title="Permanent link">&para;</a></h4>
+<p>Critical details to address:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Outbox table has index on <code>created_at</code> and <code>processed_at</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Worker implements retry logic (3 attempts with exponential backoff)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Dead-letter queue configured for poison pills</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Monitoring for outbox table size (alert if &gt; 10k events)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Event ordering guaranteed within same aggregate_id</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Worker implements graceful shutdown (no partial processing)</li>
+</ul>
+<h4 id="5-trade-offs">5. Trade-offs<a class="headerlink" href="#5-trade-offs" title="Permanent link">&para;</a></h4>
+<p><strong>Pros</strong>:
+- ✅ Guarantees at-least-once delivery
+- ✅ Atomic consistency (event + data change)
+- ✅ Decouples services</p>
+<p><strong>Cons</strong>:
+- ❌ Adds implementation complexity
+- ❌ Introduces potential message latency (seconds)
+- ❌ Requires outbox table maintenance
+- ❌ Consumers must handle duplicate events (at-least-once semantics)</p>
+<h4 id="6-examples">6. Examples<a class="headerlink" href="#6-examples" title="Permanent link">&para;</a></h4>
+<p>Link to real ADRs or code that use this pattern.</p>
+<p><strong>Example</strong>:
+- ADR-023: Booking Cancellation Event Publishing
+- ADR-031: User Profile Update Events
+- Reference Implementation: [github.com/example/outbox-pattern-go]</p>
+<h4 id="7-related-patterns">7. Related Patterns<a class="headerlink" href="#7-related-patterns" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Saga Pattern</strong>: For distributed transactions</li>
+<li><strong>Event Sourcing</strong>: For complete audit trail</li>
+<li><strong>CQRS</strong>: For read-optimized views</li>
+</ul>
+<hr />
+<h2 id="phase-3-artifacts-construction-operations">Phase 3 Artifacts: Construction &amp; Operations<a class="headerlink" href="#phase-3-artifacts-construction-operations" title="Permanent link">&para;</a></h2>
+<h3 id="7-bolt">7. Bolt<a class="headerlink" href="#7-bolt" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong>: A discrete, focused implementation unit with a single goal.</p>
+<p><strong>Generator</strong>: Engineer (breaks down ADR into Bolts)</p>
+<p><strong>Validators</strong>: Code reviewer</p>
+<p><strong>Consumers</strong>: Team (for tracking progress)</p>
+<p><strong>Key Characteristics</strong>:
+- Completable in hours or days (not weeks)
+- Single, clear goal
+- Produces testable artifact
+- Maps directly to part of an ADR</p>
+<p><strong>Structure</strong>:</p>
+<h4 id="bolt-metadata">Bolt Metadata<a class="headerlink" href="#bolt-metadata" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Bolt ID</strong>: BOLT-042</li>
+<li><strong>ADR</strong>: ADR-023 (Booking Cancellation Implementation)</li>
+<li><strong>Goal</strong>: Implement POST /bookings/{id}/cancel API endpoint</li>
+<li><strong>Assignee</strong>: Engineer name</li>
+<li><strong>Status</strong>: TODO | In Progress | In Review | Done</li>
+<li><strong>Estimated Effort</strong>: 6 hours</li>
+<li><strong>Actual Effort</strong>: (filled after completion)</li>
+</ul>
+<h4 id="acceptance-criteria">Acceptance Criteria<a class="headerlink" href="#acceptance-criteria" title="Permanent link">&para;</a></h4>
+<p>From the ADR:
+- [ ] API endpoint returns 200 for valid requests
+- [ ] Status is updated to 'cancelled' in database
+- [ ] Event is written to outbox table
+- [ ] Transaction is atomic (both or neither)
+- [ ] Unit tests cover happy path and error cases
+- [ ] Integration test validates full flow</p>
+<h4 id="implementation-notes">Implementation Notes<a class="headerlink" href="#implementation-notes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Started: 2024-01-15 10:00</li>
+<li>Completed: 2024-01-15 16:30</li>
+<li>PR: #123</li>
+<li>Challenges: Race condition in status check, fixed with SELECT FOR UPDATE</li>
+</ul>
+<hr />
+<h3 id="8-deployment-unit">8. Deployment Unit<a class="headerlink" href="#8-deployment-unit" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong>: The final, operations-ready package containing code, tests, and infrastructure configurations.</p>
+<p><strong>Generator</strong>: CI/CD pipeline (from completed Bolts)</p>
+<p><strong>Validators</strong>: CI/CD checks, smoke tests</p>
+<p><strong>Consumers</strong>: Operations team (for deployment)</p>
+<p><strong>Contents</strong>:
+- <strong>Application Code</strong>: Compiled binaries or container images
+- <strong>Tests</strong>: Unit, integration, end-to-end test suites
+- <strong>IaC</strong>: Terraform, Kubernetes manifests, Helm charts
+- <strong>Configuration</strong>: Environment-specific config files
+- <strong>Documentation</strong>: Deployment guide, runbook
+- <strong>Rollback Plan</strong>: How to safely revert</p>
+<hr />
+<h3 id="9-post-mortem">9. Post-mortem<a class="headerlink" href="#9-post-mortem" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong>: Document learnings from production incidents to feed back into the Knowledge Repository.</p>
+<p><strong>Generator</strong>: Incident commander (with team input)</p>
+<p><strong>Validators</strong>: Team, management</p>
+<p><strong>Consumers</strong>: Future designers (to avoid repeating mistakes), Knowledge Repository</p>
+<p><strong>Structure</strong>:</p>
+<h4 id="1-incident-summary">1. Incident Summary<a class="headerlink" href="#1-incident-summary" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Incident ID</strong>: INC-2024-001</li>
+<li><strong>Date</strong>: 2024-01-15</li>
+<li><strong>Duration</strong>: 2 hours 15 minutes</li>
+<li><strong>Severity</strong>: SEV-2 (service degraded)</li>
+<li><strong>Impact</strong>: 15% of booking cancellation requests failed</li>
+</ul>
+<h4 id="2-timeline">2. Timeline<a class="headerlink" href="#2-timeline" title="Permanent link">&para;</a></h4>
+<ul>
+<li>10:00 - Alert: Elevated error rate on booking cancellation API</li>
+<li>10:05 - Incident declared, on-call engineer investigating</li>
+<li>10:30 - Root cause identified: Outbox table deadlock</li>
+<li>11:00 - Hotfix deployed: Added query timeout</li>
+<li>12:15 - Incident resolved, monitoring normalized</li>
+</ul>
+<h4 id="3-root-cause-analysis">3. Root Cause Analysis<a class="headerlink" href="#3-root-cause-analysis" title="Permanent link">&para;</a></h4>
+<p>The outbox worker was holding long-running transactions, causing deadlocks when the API tried to insert new events.</p>
+<p><strong>Contributing Factors</strong>:
+- Worker batch size was too large (1000 events)
+- Database connection pool was under-sized
+- ADR-023 did not specify transaction timeout requirements</p>
+<h4 id="4-resolution">4. Resolution<a class="headerlink" href="#4-resolution" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Reduced worker batch size to 100</li>
+<li>Increased database connection pool</li>
+<li>Added 5-second query timeout to all outbox operations</li>
+</ul>
+<h4 id="5-learnings-action-items">5. Learnings &amp; Action Items<a class="headerlink" href="#5-learnings-action-items" title="Permanent link">&para;</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>ADR Amendment</strong>: Update ADR-023 to include transaction timeout guidelines</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Playbook Update</strong>: Add "Outbox Performance Tuning" entry</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Monitoring</strong>: Add alert for database lock wait time</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Documentation</strong>: Update runbook with deadlock troubleshooting</li>
+</ul>
+<h4 id="6-traceability">6. Traceability<a class="headerlink" href="#6-traceability" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>ADR</strong>: ADR-023 (Outbox Pattern Implementation)</li>
+<li><strong>Bolt</strong>: BOLT-042 (Outbox Worker)</li>
+<li><strong>PRD</strong>: PRD-015 (Booking Management)</li>
+</ul>
+<hr />
+<h3 id="10-fix-it-bolt">10. Fix-It Bolt<a class="headerlink" href="#10-fix-it-bolt" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong>: A micro-sized Bolt for rapid bug fixes during production incidents.</p>
+<p><strong>Generator</strong>: AI (proposes fix based on traceability chain)</p>
+<p><strong>Validators</strong>: On-call engineer</p>
+<p><strong>Consumers</strong>: CI/CD pipeline (for deployment)</p>
+<p><strong>Structure</strong>: Same as regular Bolt, but:
+- <strong>Scope</strong>: Single bug fix only
+- <strong>Timeline</strong>: Hours, not days
+- <strong>Process</strong>: Expedited review (pair programming or immediate merge for hotfixes)</p>
+<p><strong>Example</strong>:
+- <strong>Fix-It Bolt ID</strong>: FIX-001
+- <strong>Related Incident</strong>: INC-2024-001
+- <strong>Root Cause</strong>: Outbox worker deadlock
+- <strong>Fix</strong>: Reduce batch size from 1000 to 100, add query timeout
+- <strong>Estimated Risk</strong>: Low (reduces load, improves performance)
+- <strong>Rollback Plan</strong>: Revert to previous worker configuration</p>
+<hr />
+<h2 id="artifact-relationships">Artifact Relationships<a class="headerlink" href="#artifact-relationships" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>graph TD
+    PRD[PRD] --&gt; DAA[AI-DAA]
+    PRD --&gt; TIP[TIP]
+    DAA --&gt; RFC[RFC]
+    TIP --&gt; RFC
+    Playbook[Architectural Playbook] -.references.-&gt; RFC
+    RFC --&gt; ADR[AI-ADR]
+    ADR --&gt; Bolt1[Bolt 1]
+    ADR --&gt; Bolt2[Bolt 2]
+    Bolt1 --&gt; Deployment[Deployment Unit]
+    Bolt2 --&gt; Deployment
+    Deployment --&gt; Incident[Production Incident]
+    Incident --&gt; Postmortem[Post-mortem]
+    Incident --&gt; FixIt[Fix-It Bolt]
+    Postmortem -.feeds back.-&gt; Playbook
+    FixIt --&gt; ADR</code></pre>
+<hr />
+<h2 id="validation-matrix">Validation Matrix<a class="headerlink" href="#validation-matrix" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Artifact</th>
+<th>Validator</th>
+<th>Validation Method</th>
+<th>Acceptance Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PRD</strong></td>
+<td>Product Manager</td>
+<td>Stakeholder review</td>
+<td>Clear user stories, measurable success metrics</td>
+</tr>
+<tr>
+<td><strong>AI-DAA</strong></td>
+<td>Domain Expert / Architect</td>
+<td>Domain accuracy review</td>
+<td>All PRD stories mapped, invariants explicit</td>
+</tr>
+<tr>
+<td><strong>TIP</strong></td>
+<td>Engineer / Architect</td>
+<td>Feasibility review</td>
+<td>Addresses all PRD requirements, realistic estimate</td>
+</tr>
+<tr>
+<td><strong>RFC</strong></td>
+<td>Architecture Team</td>
+<td>Design review</td>
+<td>Trade-offs documented, alternatives considered</td>
+</tr>
+<tr>
+<td><strong>AI-ADR</strong></td>
+<td>Architect</td>
+<td>Final approval</td>
+<td>Aligned with DAA, implementable, risks mitigated</td>
+</tr>
+<tr>
+<td><strong>Bolt</strong></td>
+<td>Code Reviewer</td>
+<td>PR review</td>
+<td>Meets acceptance criteria, tests pass</td>
+</tr>
+<tr>
+<td><strong>Post-mortem</strong></td>
+<td>Team</td>
+<td>Retrospective</td>
+<td>Root cause identified, action items defined</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Next</strong>: <a href="../workflow/">Workflow</a> - Step-by-step process for using these artifacts</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../lifecycle/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Lifecycle">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Lifecycle
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../workflow/" class="md-footer__link md-footer__link--next" aria-label="Next: Workflow">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Workflow
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 AirsStack
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/airsstack" target="_blank" rel="noopener" title="AirsStack on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

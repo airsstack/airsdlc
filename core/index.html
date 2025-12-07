@@ -1,0 +1,2797 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The AI-Responsible Software Development Lifecycle - A Framework for AI-Driven Development">
+      
+      
+        <meta name="author" content="AirsStack">
+      
+      
+        <link rel="canonical" href="https://airsstack.github.io/airsdlc/core/">
+      
+      
+        <link rel="prev" href="../extensibility/">
+      
+      
+        <link rel="next" href="../examples/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Complete Guide - AirSDLC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-airsdlc-an-actionable-framework-for-ai-driven-development" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div class="md-banner">
+  <div class="md-banner__inner md-grid md-typeset">
+    📚 AirSDLC Framework Specification - A comprehensive guide for AI-driven development
+  </div>
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="AirSDLC" class="md-header__button md-logo" aria-label="AirSDLC" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AirSDLC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Complete Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/airsstack/airsdlc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    airsstack/airsdlc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../philosophy/" class="md-tabs__link">
+          
+  
+  
+  Framework Specification
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../examples/" class="md-tabs__link">
+          
+  
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../AI-DLC-ATTRIBUTION/" class="md-tabs__link">
+          
+  
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AirSDLC" class="md-nav__button md-logo" aria-label="AirSDLC" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AirSDLC
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/airsstack/airsdlc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    airsstack/airsdlc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Framework Specification
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Framework Specification
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Philosophy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lifecycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../artifacts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Artifacts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extensibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensibility
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complete Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complete Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction &amp; Philosophy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction &amp; Philosophy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#my-journey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My Journey
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Principle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Goal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-ai-dlc-principles-the-foundation-of-airsdlc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core AI-DLC Principles: The Foundation of AirSDLC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core AI-DLC Principles: The Foundation of AirSDLC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysis-of-the-core-ai-dlc-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analysis of the Core AI-DLC Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-airsdlc-as-an-extensible-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The AirSDLC as an Extensible Framework
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The AirSDLC as an Extensible Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-abstract-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Abstract Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-workflow-as-a-state-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Workflow as a State Machine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extension-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extension Points
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-airsdlc-lifecycle-an-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The AirSDLC Lifecycle: An Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The AirSDLC Lifecycle: An Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-inception-the-what" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: Inception (The "What")
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-collaborative-design-the-how" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Collaborative Design (The "How")
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-construction-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Construction &amp; Operation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-knowledge-repository-the-single-source-of-truth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Knowledge Repository: The Single Source of Truth
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Knowledge Repository: The Single Source of Truth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-virtuous-cycle-of-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Virtuous Cycle of Knowledge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-core-airsdlc-workflow-a-step-by-step-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Core AirSDLC Workflow: A Step-by-Step Guide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Core AirSDLC Workflow: A Step-by-Step Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-workflow-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Workflow Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-by-Step Explanation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-core-artifacts-of-airsdlc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Core Artifacts of AirSDLC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Core Artifacts of AirSDLC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-ai-daa-domain-architecture-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The AI-DAA (Domain Architecture Analysis)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-architectural-playbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Architectural Playbook
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-vs-rfc-from-proposal-to-peer-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TIP vs. RFC: From Proposal to Peer Review
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-ai-adr-architectural-decision-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The AI-ADR (Architectural Decision Record)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pragmatism-adaptability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pragmatism &amp; Adaptability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pragmatism &amp; Adaptability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-hybrid-model-smart-selectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Hybrid Model: Smart Selectivity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-decision-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Decision Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-principle-of-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Principle of Validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-payoff-end-to-end-traceability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Payoff: End-to-End Traceability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-ai-dlc-rituals-into-the-airsdlc-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integrating AI-DLC Rituals into the AirSDLC Workflow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrating AI-DLC Rituals into the AirSDLC Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-unit-of-work-as-a-validated-daa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The "Unit of Work" as a Validated DAA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-mob-elaboration-ritual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The "Mob Elaboration" Ritual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-mob-construction-ritual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The "Mob Construction" Ritual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bolts-as-actionable-adr-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Bolts" as Actionable ADR Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuous-oversight-in-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Continuous Oversight" in Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-deployment-bug-incident-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post-Deployment: Bug &amp; Incident Handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post-Deployment: Bug &amp; Incident Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-context-aware-incident-response-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Context-Aware Incident Response Loop
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operational-readiness-the-on-call-playbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operational Readiness: The On-Call Playbook
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-airsdlc-ecosystem-from-framework-to-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The AirSDLC Ecosystem: From Framework to Platform
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The AirSDLC Ecosystem: From Framework to Platform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#future-vision-the-knowledge-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Vision: The Knowledge Hub
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AI-DLC-ATTRIBUTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-DLC Attribution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction &amp; Philosophy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction &amp; Philosophy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#my-journey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My Journey
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Principle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Goal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-ai-dlc-principles-the-foundation-of-airsdlc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core AI-DLC Principles: The Foundation of AirSDLC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core AI-DLC Principles: The Foundation of AirSDLC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysis-of-the-core-ai-dlc-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analysis of the Core AI-DLC Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-airsdlc-as-an-extensible-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The AirSDLC as an Extensible Framework
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The AirSDLC as an Extensible Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-abstract-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Abstract Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-workflow-as-a-state-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Workflow as a State Machine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extension-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extension Points
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-airsdlc-lifecycle-an-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The AirSDLC Lifecycle: An Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The AirSDLC Lifecycle: An Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-inception-the-what" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: Inception (The "What")
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-collaborative-design-the-how" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Collaborative Design (The "How")
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-construction-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Construction &amp; Operation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-knowledge-repository-the-single-source-of-truth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Knowledge Repository: The Single Source of Truth
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Knowledge Repository: The Single Source of Truth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-virtuous-cycle-of-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Virtuous Cycle of Knowledge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-core-airsdlc-workflow-a-step-by-step-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Core AirSDLC Workflow: A Step-by-Step Guide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Core AirSDLC Workflow: A Step-by-Step Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-workflow-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Workflow Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-by-Step Explanation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-core-artifacts-of-airsdlc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Core Artifacts of AirSDLC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Core Artifacts of AirSDLC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-ai-daa-domain-architecture-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The AI-DAA (Domain Architecture Analysis)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-architectural-playbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Architectural Playbook
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-vs-rfc-from-proposal-to-peer-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TIP vs. RFC: From Proposal to Peer Review
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-ai-adr-architectural-decision-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The AI-ADR (Architectural Decision Record)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pragmatism-adaptability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pragmatism &amp; Adaptability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pragmatism &amp; Adaptability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-hybrid-model-smart-selectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Hybrid Model: Smart Selectivity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-decision-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Decision Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-principle-of-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Principle of Validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-payoff-end-to-end-traceability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Payoff: End-to-End Traceability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-ai-dlc-rituals-into-the-airsdlc-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integrating AI-DLC Rituals into the AirSDLC Workflow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrating AI-DLC Rituals into the AirSDLC Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-unit-of-work-as-a-validated-daa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The "Unit of Work" as a Validated DAA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-mob-elaboration-ritual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The "Mob Elaboration" Ritual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-mob-construction-ritual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The "Mob Construction" Ritual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bolts-as-actionable-adr-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Bolts" as Actionable ADR Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuous-oversight-in-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Continuous Oversight" in Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-deployment-bug-incident-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post-Deployment: Bug &amp; Incident Handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post-Deployment: Bug &amp; Incident Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-context-aware-incident-response-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Context-Aware Incident Response Loop
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operational-readiness-the-on-call-playbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operational Readiness: The On-Call Playbook
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-airsdlc-ecosystem-from-framework-to-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The AirSDLC Ecosystem: From Framework to Platform
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The AirSDLC Ecosystem: From Framework to Platform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#future-vision-the-knowledge-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Vision: The Knowledge Hub
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="the-airsdlc-an-actionable-framework-for-ai-driven-development">The AirSDLC: An Actionable Framework for AI-Driven Development<a class="headerlink" href="#the-airsdlc-an-actionable-framework-for-ai-driven-development" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Note</strong>: This is the comprehensive, single-document reference for the AirSDLC framework. For easier navigation, the content has been split into focused chapters:
+- <strong><a href="../overview/">Overview</a></strong> - Introduction and key concepts
+- <strong><a href="../philosophy/">Philosophy</a></strong> - Core principles and AI-DLC foundation
+- <strong><a href="../lifecycle/">Lifecycle</a></strong> - The three phases explained
+- <strong><a href="../artifacts/">Artifacts</a></strong> - DAA, ADR, TIP, RFC specifications
+- <strong><a href="../workflow/">Workflow</a></strong> - Step-by-step process and rituals
+- <strong><a href="../operations/">Operations</a></strong> - Post-deployment and incident handling
+- <strong><a href="../extensibility/">Extensibility</a></strong> - How to adapt and extend
+- <strong><a href="../examples/">Examples</a></strong> - Sample artifacts and use cases</p>
+</blockquote>
+<hr />
+<h2 id="introduction-philosophy">Introduction &amp; Philosophy<a class="headerlink" href="#introduction-philosophy" title="Permanent link">&para;</a></h2>
+<h3 id="my-journey">My Journey<a class="headerlink" href="#my-journey" title="Permanent link">&para;</a></h3>
+<p>This document formalizes a series of successful experiments in applying a structured, AI-driven lifecycle to real-world software projects. Starting with the theoretical concepts of the AI-Driven Development Lifecycle (AI-DLC), I developed a practical workflow that demonstrated remarkable success in bridging the gap between ambiguous business requirements and production-ready architectural decisions. This framework, the "AI-Responsible Software Development Lifecycle" (AirSDLC), is the codification of that proven process.</p>
+<h3 id="core-principle">Core Principle<a class="headerlink" href="#core-principle" title="Permanent link">&para;</a></h3>
+<p>AirSDLC is built on the core AI-DLC paradigm: <strong>AI-Driven Execution with Human Oversight</strong>.</p>
+<p>In this model, the AI is not merely an assistant or a code-completion tool. It is a central collaborator that generates plans, models domains, and proposes solutions. The human expert's role is elevated from a generator of artifacts to a <strong>validator, curator, and strategic decision-maker</strong>. Our primary cognitive load is shifted from creation to evaluation—a much higher-leverage activity.</p>
+<h3 id="the-goal">The Goal<a class="headerlink" href="#the-goal" title="Permanent link">&para;</a></h3>
+<p>The goal of AirSDLC is to provide a practical, repeatable methodology that creates a fully traceable, high-fidelity chain from initial business intent to a final, actionable architectural decision record.</p>
+<hr />
+<h2 id="core-ai-dlc-principles-the-foundation-of-airsdlc">Core AI-DLC Principles: The Foundation of AirSDLC<a class="headerlink" href="#core-ai-dlc-principles-the-foundation-of-airsdlc" title="Permanent link">&para;</a></h2>
+<p>The AirSDLC is a practical and actionable implementation of the theoretical AI-DLC framework. To ensure our design remains grounded in its foundational principles, this section summarizes the core concepts derived from the AI-DLC source documents. The <code>airsdlc</code> crate and its associated tools must adhere to these principles.</p>
+<h3 id="analysis-of-the-core-ai-dlc-framework"><strong>Analysis of the Core AI-DLC Framework</strong><a class="headerlink" href="#analysis-of-the-core-ai-dlc-framework" title="Permanent link">&para;</a></h3>
+<p>Based on the provided notebooks, the AI-DLC is a complete, AI-native software development methodology designed to replace traditional SDLCs like Agile. Its philosophy is <strong>AI-Driven, with Human-in-the-Loop Governance</strong>. The AI is not an assistant; it is the primary executor, while humans are the validators and decision-makers.</p>
+<h4 id="1-the-three-sequential-phases"><strong>1. The Three Sequential Phases</strong><a class="headerlink" href="#1-the-three-sequential-phases" title="Permanent link">&para;</a></h4>
+<p>The framework is built on a "sequential knowledge handoff" across three distinct phases. Each phase's validated output becomes the non-negotiable input for the next.</p>
+<ol>
+<li><strong>Inception:</strong> The "WHAT and WHY" phase. Translates an initial <code>Business Intent</code> into a locked, buildable contract.</li>
+<li><strong>Construction:</strong> The "HOW" phase. Transforms the contract from Inception into tested, deployable software artifacts.</li>
+<li><strong>Operation:</strong> The "MAINTAIN" phase. Deploys, monitors, and fixes the software in production, using the full context from the previous phases.</li>
+</ol>
+<h4 id="2-the-core-artifacts-the-nouns-of-the-framework"><strong>2. The Core Artifacts (The "Nouns" of the Framework)</strong><a class="headerlink" href="#2-the-core-artifacts-the-nouns-of-the-framework" title="Permanent link">&para;</a></h4>
+<p>These are the key data structures that flow through the lifecycle.</p>
+<ul>
+<li>
+<p><strong>Unit of Work (UOW):</strong> The primary container for a major piece of functionality, replacing the "Epic." It is the main output of the Inception phase.</p>
+<ul>
+<li><strong>Core Composition:</strong> Every UOW <em>must</em> contain five "problem-defining" artifacts:<ol>
+<li>PR/FAQ</li>
+<li>User Stories</li>
+<li>Non-Functional Requirements (NFRs)</li>
+<li>Risk Descriptions</li>
+<li>Measurement Criteria</li>
+</ol>
+</li>
+<li><strong>Extensibility:</strong> The framework explicitly allows for <em>custom artifacts</em> (e.g., Sequence Diagrams, Domain Models) to be added to a UOW, but the five above are the mandatory core.</li>
+</ul>
+</li>
+<li>
+<p><strong>Bolt:</strong> A "single workable-unit that only has a single goal," replacing the "Sprint." Bolts are the sequential, tactical steps to build a UOW, measured in hours or days.</p>
+<ul>
+<li><strong>Core Composition:</strong> Bolts produce "solution-defining" artifacts:<ol>
+<li>Validated Logical Design &amp; Architecture Decision Records (ADRs)</li>
+<li>Generated Code &amp; Comprehensive Test Suite</li>
+<li>Deployment Unit</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Deployment Unit:</strong> The final, "operations-ready" package from the Construction phase, containing code, tests, and IaC configurations.</p>
+</li>
+<li>
+<p><strong>Fix-It Bolt:</strong> A special, micro-sized Bolt generated by the AI for bug fixing during the Operation phase. It follows a structured process of RCA, proposal, validation, and execution.</p>
+</li>
+</ul>
+<h4 id="3-the-core-rituals-the-verbs-of-the-framework"><strong>3. The Core Rituals (The "Verbs" of the Framework)</strong><a class="headerlink" href="#3-the-core-rituals-the-verbs-of-the-framework" title="Permanent link">&para;</a></h4>
+<p>These are the mandatory, synchronous "Mob" collaborations that serve as the human-in-the-loop validation gates.</p>
+<ol>
+<li>
+<p><strong>Mob Elaboration (Inception):</strong> A cross-functional team convenes to review, refine, and ultimately grant "human validation" on the AI-generated draft UOW. The output is a <strong>"Validated Unit of Work."</strong></p>
+</li>
+<li>
+<p><strong>Mob Construction (Construction):</strong> A technical team convenes to review and validate the AI's proposed architecture and ADRs for a specific Bolt <em>before</em> any code is generated. The output is a <strong>"Validated Logical Design &amp; ADRs."</strong></p>
+</li>
+<li>
+<p><strong>Continuous Oversight (Operation):</strong> An ongoing series of expedited validation rituals where the human mob provides the final "go/no-go" decision on any AI-proposed action that would change the production environment (e.g., deploying a new <code>Deployment Unit</code> or a <code>Fix-It Bolt</code>).</p>
+</li>
+</ol>
+<h4 id="4-the-foundational-interaction-loop"><strong>4. The Foundational Interaction Loop</strong><a class="headerlink" href="#4-the-foundational-interaction-loop" title="Permanent link">&para;</a></h4>
+<p>Underpinning everything is a repeating, four-stage cycle that defines the human-AI partnership:</p>
+<ol>
+<li><strong>[AI] Propose &amp; Decompose:</strong> The AI analyzes an input and creates a detailed plan/artifact.</li>
+<li><strong>[AI -&gt; Human] Clarify &amp; Question:</strong> The AI actively seeks context and defers critical decisions.</li>
+<li><strong>[Human] Validate &amp; Direct:</strong> The "Mob" provides judgment, makes decisions, and gives approval.</li>
+<li><strong>[AI] Implement &amp; Update:</strong> Only after validation, the AI executes the plan and generates the final artifacts.</li>
+</ol>
+<hr />
+<h2 id="the-airsdlc-as-an-extensible-framework">The AirSDLC as an Extensible Framework<a class="headerlink" href="#the-airsdlc-as-an-extensible-framework" title="Permanent link">&para;</a></h2>
+<p>While this document describes a specific, opinionated workflow for software development, the <code>AirSDLC</code> itself is designed as an abstract, extensible framework. It is a specification for a <strong>workflow engine</strong> that can be implemented by higher-level tools and extended by engineers to fit their specific needs.</p>
+<p>Any tool that implements this framework must adhere to its core concepts and state machine, ensuring a consistent and predictable process.</p>
+<h3 id="core-abstract-concepts">Core Abstract Concepts<a class="headerlink" href="#core-abstract-concepts" title="Permanent link">&para;</a></h3>
+<p>An <code>AirSDLC</code> implementation is built on four fundamental concepts:</p>
+<ul>
+<li><strong><code>Phase</code></strong>: A distinct stage of the lifecycle with a clear objective (e.g., Inception, Design).</li>
+<li><strong><code>Artifact</code></strong>: A structured data object that serves as the input or output of a <code>Phase</code> (e.g., <code>AI-DAA</code>, <code>AI-ADR</code>). Each artifact has a defined schema.</li>
+<li><strong><code>State</code></strong>: The status of an <code>Artifact</code> within the workflow (e.g., <code>draft</code>, <code>review</code>, <code>validated</code>, <code>finalized</code>).</li>
+<li><strong><code>Transition</code></strong>: An action that changes the <code>State</code> of an <code>Artifact</code>, moving it from one <code>Phase</code> to the next.</li>
+</ul>
+<h3 id="the-workflow-as-a-state-machine">The Workflow as a State Machine<a class="headerlink" href="#the-workflow-as-a-state-machine" title="Permanent link">&para;</a></h3>
+<p>At its core, the <code>AirSDLC</code> is a state machine that operates on <code>Artifacts</code>. A workflow engine is responsible for managing the state of these artifacts and executing the transitions between them.</p>
+<pre class="mermaid"><code>graph TD
+    subgraph "Phase: Inception"
+        A[Artifact: DAA &lt;br/&gt; State: draft] --&gt; B{Validate DAA};
+        B -- Approved --&gt; C[Artifact: DAA &lt;br/&gt; State: validated];
+    end
+    subgraph "Phase: Design"
+        C --&gt; D[Artifact: ADR &lt;br/&gt; State: draft];
+        D --&gt; E{Validate ADR};
+        E -- Approved --&gt; F[Artifact: ADR &lt;br/&gt; State: finalized];
+    end</code></pre>
+<h3 id="extension-points">Extension Points<a class="headerlink" href="#extension-points" title="Permanent link">&para;</a></h3>
+<p>The framework is designed to be extensible. A compliant workflow engine should provide mechanisms for users to add custom functionality through well-defined "extension points":</p>
+<ol>
+<li><strong>Custom Artifacts</strong>: Engineers can define their own <code>Artifact</code> types with custom schemas. For example, a team could introduce a <code>SecurityReview</code> artifact required before the <code>Construction</code> phase.</li>
+<li><strong>Custom Templates</strong>: The generation of any <code>Artifact</code> should be driven by a template. The engine should allow users to override default templates or register new ones for their custom artifacts. This allows for tailoring the output to specific team standards or languages.</li>
+<li><strong>Lifecycle Hooks</strong>: The engine should expose hooks at critical points in the state machine (e.g., <code>pre-validation</code>, <code>post-transition</code>). Plugins can listen for these hooks to inject custom logic, such as sending a notification to Slack, running a compliance check, or archiving an artifact.</li>
+</ol>
+<p>By adhering to this abstract framework, implementation tools can provide a robust and predictable core experience while still offering the flexibility for teams to adapt the process to their unique requirements. The remainder of this document describes the <strong>default, reference implementation</strong> of this framework.</p>
+<hr />
+<h2 id="the-airsdlc-lifecycle-an-overview">The AirSDLC Lifecycle: An Overview<a class="headerlink" href="#the-airsdlc-lifecycle-an-overview" title="Permanent link">&para;</a></h2>
+<p>The AirSDLC is a sequential knowledge handoff, where each phase enriches the context for the next, ensuring that technical decisions are always grounded in the business domain.</p>
+<pre class="mermaid"><code>graph TD
+    A[Business Intent] --&gt; B(Phase 1: Inception);
+    B --&gt; C[Artifact: AI-DAA];
+    C --&gt; D(Phase 2: Collaborative Design);
+    D --&gt; E[Artifact: AI-ADR];
+    E --&gt; F(Phase 3: Construction);</code></pre>
+<h3 id="phase-1-inception-the-what">Phase 1: Inception (The "What")<a class="headerlink" href="#phase-1-inception-the-what" title="Permanent link">&para;</a></h3>
+<p>The objective of this phase is to translate an ambiguous business goal into a pure, technology-agnostic, and validated model of the business domain.</p>
+<h3 id="phase-2-collaborative-design-the-how">Phase 2: Collaborative Design (The "How")<a class="headerlink" href="#phase-2-collaborative-design-the-how" title="Permanent link">&para;</a></h3>
+<p>This phase is a human-AI collaborative ritual designed to synthesize the "what" from the Inception phase with the "how" of a technical implementation, resulting in a robust architectural decision.</p>
+<h3 id="phase-3-construction-operation">Phase 3: Construction &amp; Operation<a class="headerlink" href="#phase-3-construction-operation" title="Permanent link">&para;</a></h3>
+<p>This phase uses the final architectural decision to generate, test, and deploy the code, and then provides context-aware monitoring in production.</p>
+<hr />
+<h2 id="the-knowledge-repository-the-single-source-of-truth">The Knowledge Repository: The Single Source of Truth<a class="headerlink" href="#the-knowledge-repository-the-single-source-of-truth" title="Permanent link">&para;</a></h2>
+<p>The primary output of the AirSDLC is not just code, but a living, interconnected <strong>Knowledge Repository</strong>. This repository serves as the "single source of truth" for the entire system, documenting the full lifecycle of every feature from business intent to technical implementation.</p>
+<p>It is the central "brain" that enables end-to-end traceability, facilitates AI-driven analysis and code generation, and provides the foundational context for the AI-augmented on-call process described in the operational playbook.</p>
+<h3 id="the-virtuous-cycle-of-knowledge">The Virtuous Cycle of Knowledge<a class="headerlink" href="#the-virtuous-cycle-of-knowledge" title="Permanent link">&para;</a></h3>
+<p>The following diagram illustrates the central role of the Knowledge Repository. The AirSDLC development workflow continuously <strong>writes to</strong> and enriches the repository. In contrast, the operational workflows (like on-call incident response) primarily <strong>read from</strong> the repository to gain context and accelerate resolution. This creates a virtuous cycle where design decisions inform operations, and operational learnings (as Post-mortems) are fed back into the repository to inform future design.</p>
+<pre class="mermaid"><code>graph LR
+    subgraph "Writes to Repository"
+        direction TB
+        Dev(AirSDLC Development)
+    end
+
+    subgraph "Reads from Repository"
+        direction TB
+        Ops(On-Call Incident Response)
+    end
+
+    subgraph "Knowledge Repository"
+        direction TB
+        Repo(fa:fa-database Single Source of Truth)
+        Repo -- Contains --&gt; Artifacts[PRDs, DAAs, ADRs, Code, Playbooks, Post-mortems]
+    end
+
+    Dev -- Creates &amp; Enriches --&gt; Repo;
+    Ops -- Reads &amp; Correlates --&gt; Repo;
+    Ops -- Creates --&gt; Postmortem((Post-mortem));
+    Postmortem -- Feeds Back Into --&gt; Repo;</code></pre>
+<h3 id="core-components">Core Components<a class="headerlink" href="#core-components" title="Permanent link">&para;</a></h3>
+<p>The repository contains all artifacts generated by the AirSDLC and subsequent operations:</p>
+<ul>
+<li><strong>Product Requirements Documents (PRDs):</strong> The "why" from a business perspective.</li>
+<li><strong>Domain Architecture Analyses (AI-DAAs):</strong> The "what" of the business logic.</li>
+<li><strong>Requests for Comments (RFCs):</strong> The forum for collaborative design.</li>
+<li><strong>Architectural Decision Records (AI-ADRs):</strong> The "how" of the technical implementation.</li>
+<li><strong>Architectural Playbooks:</strong> The library of standard solutions to common problems.</li>
+<li><strong>Bolts / Bolt Execution Logs:</strong> A record of all implemented features and their corresponding code commits.</li>
+<li><strong>Post-mortems:</strong> A searchable library of past incidents and their resolutions, closing the loop from operations back to design.</li>
+</ul>
+<hr />
+<h2 id="the-core-airsdlc-workflow-a-step-by-step-guide">The Core AirSDLC Workflow: A Step-by-Step Guide<a class="headerlink" href="#the-core-airsdlc-workflow-a-step-by-step-guide" title="Permanent link">&para;</a></h2>
+<p>This section provides a detailed, prescriptive guide for how to apply the AirSDLC framework, connecting the core artifacts into a cohesive, actionable workflow.</p>
+<h3 id="the-workflow-diagram">The Workflow Diagram<a class="headerlink" href="#the-workflow-diagram" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>graph TD
+    subgraph "Phase 1: Inception"
+        A[Start: New Business Intent/PRD] --&gt; B{Complex or High-Risk Feature?};
+        B -- Yes --&gt; C[Full Workflow: Generate AI-DAA];
+        B -- No --&gt; D[Lightweight Workflow: Engineer writes TIP];
+        C --&gt; E[Validated DAA];
+        D --&gt; F[Draft TIP];
+    end
+
+    subgraph "Phase 2: Collaborative Design"
+        E --&gt; G(Input: DAA + Engineer's RFC);
+        F --&gt; G;
+        G --&gt; H[Start Collaborative Discussion];
+        H --&gt; I{Consult Architectural Playbook};
+        I --&gt; J[Engage AI as Socratic Sparring Partner];
+        J --&gt; K[Challenge, Visualize, and Refine Design];
+        K --&gt; L[Finalize Design];
+    end
+
+    subgraph "Phase 3: Finalization &amp; Construction"
+        L --&gt; M[Generate Final AI-ADR];
+        M --&gt; N[Execute Bolts: Generate Code from ADR];
+        N --&gt; O((End: Production-Ready Code));
+    end</code></pre>
+<h3 id="step-by-step-explanation">Step-by-Step Explanation<a class="headerlink" href="#step-by-step-explanation" title="Permanent link">&para;</a></h3>
+<p><strong>Step 1: The Fork - Choose the Right Path</strong>
+The workflow begins with a critical decision point based on the principles of Pragmatism &amp; Adaptability (see the "Pragmatism &amp; Adaptability" section below).
+- <strong>Input:</strong> A new Business Intent or Product Requirements Document (PRD).
+- <strong>Action:</strong> The lead engineer or architect assesses the feature's context. Using the Decision Matrix described in the "Pragmatism &amp; Adaptability" section, they determine the appropriate level of upfront modeling required.
+- <strong>Path A (Full Workflow):</strong> For complex, high-risk, or unfamiliar domains, the process starts with generating a formal <strong>AI-DAA</strong>. This investment is crucial to de-risk the project.
+- <strong>Path B (Lightweight Workflow):</strong> For simpler, well-understood features, the engineer reads the PRD and writes a <strong>TIP (Technical Implementation Proposal)</strong>. This is a more direct, less abstract document focusing on concrete implementation details like database schemas and API endpoints.</p>
+<p><strong>Step 2: The Merge - Prepare for Collaborative Design</strong>
+The outputs of the Inception phase, whether a DAA or a TIP, are prepared as the primary input for the design discussion.
+- <strong>Action:</strong> The engineer assembles a draft <strong>RFC (Request for Comments)</strong> document. This document contains the DAA or TIP, along with any initial technical ideas, constraints, or questions the engineer has.</p>
+<p><strong>Step 3: The Ritual - The Collaborative Discussion</strong>
+This is the core "Mob Construction" ritual where the human architect and the AI collaborate to produce a robust design.
+- <strong>Action:</strong> The architect initiates a session with the AI, providing the draft RFC as context.
+- <strong>Consult the Playbook:</strong> The architect identifies the key architectural challenges (e.g., data consistency, service communication) and consults the <strong>Architectural Playbook</strong> (described under "The Core Artifacts of AirSDLC") for established patterns and solutions.
+- <strong>Engage the Sparring Partner:</strong> The architect prompts the AI to act as a <strong>"Socratic Sparring Partner."</strong> Using the patterns from the Playbook, the architect directs the AI to challenge the design, propose alternatives, and analyze trade-offs. This is an iterative loop of questioning, generating diagrams-as-code to clarify thinking, and refining the design until it is robust and well-vetted.</p>
+<p><strong>Step 4: The Record - Generate the Final AI-ADR</strong>
+Once the design is stable and all major risks have been addressed, the decisions are codified.
+- <strong>Action:</strong> The architect prompts the AI to generate the final <strong>AI-ADR (Architectural Decision Record)</strong>. This document is the immutable source of truth for the implementation, capturing the final architecture, the rationale behind the decisions, and the trade-offs that were accepted.</p>
+<p><strong>Step 5: The Build - Execute "Bolts"</strong>
+The ADR is now an executable specification.
+- <strong>Action:</strong> The project is broken down into <strong>"Bolts"</strong> (as defined in the "Integrating AI-DLC Rituals" section), where each Bolt represents a discrete piece of the ADR (e.g., "implement the <code>cancel_booking</code> endpoint"). The engineer prompts the AI to generate the boilerplate code, tests, and configurations for one Bolt at a time, focusing their own energy on implementing the core, complex business logic.</p>
+<hr />
+<h2 id="the-core-artifacts-of-airsdlc">The Core Artifacts of AirSDLC<a class="headerlink" href="#the-core-artifacts-of-airsdlc" title="Permanent link">&para;</a></h2>
+<h3 id="the-ai-daa-domain-architecture-analysis">The AI-DAA (Domain Architecture Analysis)<a class="headerlink" href="#the-ai-daa-domain-architecture-analysis" title="Permanent link">&para;</a></h3>
+<p>The AI-DAA is the cornerstone of the AirSDLC's "Full Workflow." It is a <strong>strictly technology- and vendor-agnostic</strong> blueprint of the business domain. Generated by the AI from the structured PRD, it is a 100% pure pseudo-abstraction of the business logic. It contains <strong>no specific technical solutions</strong>: no databases, no frameworks, and no programming languages. Its primary purpose is to ensure a deep, shared understanding of the problem space <em>before</em> any technical solutions are considered. A single, well-formed DAA can be implemented in any number of ways—for example, as a Python-based monolith or as a set of Golang-based microservices.</p>
+<h4 id="why-domain-driven-design-ddd">Why Domain-Driven Design (DDD)?<a class="headerlink" href="#why-domain-driven-design-ddd" title="Permanent link">&para;</a></h4>
+<p>The AirSDLC adopts DDD as its foundational modeling methodology for several key reasons:
+- <strong>Focus on Business Domain:</strong> DDD places the primary focus on the core business logic. It provides a set of tools for tackling complexity in the heart of the software.
+- <strong>Shared Understanding (Ubiquitous Language):</strong> DDD insists on a common, rigorous language shared between domain experts, product managers, and developers. This "Ubiquitous Language" reduces ambiguity and ensures everyone is talking about the same concepts.
+- <strong>Strategic Boundaries:</strong> DDD provides patterns (like Bounded Contexts and Context Maps) to strategically break down a large, complex system into smaller, more manageable, and loosely coupled parts. This is essential for building scalable and maintainable software.
+- <strong>AI-Friendliness:</strong> The structured and explicit nature of DDD artifacts (Aggregates, Entities, Value Objects, Domain Events) makes it an ideal methodology for an AI to work with. The AI can be trained to identify and generate these patterns from a well-structured PRD.</p>
+<h4 id="the-daa-generation-process">The DAA Generation Process<a class="headerlink" href="#the-daa-generation-process" title="Permanent link">&para;</a></h4>
+<p>The AI-DAA is the result of a systematic mapping process, executed by the AI, that translates product goals into DDD patterns.</p>
+<pre class="mermaid"><code>graph TD
+    A[Product Goals &amp; User Stories in PRD] --&gt; B{AI Analysis: Identify Verbs &amp; Nouns};
+    B --&gt; C[Map Nouns to Potential Entities/Aggregates];
+    B --&gt; D[Map Verbs to Potential Operations/Domain Events];
+    C &amp; D --&gt; E{AI Strategic Analysis: Group related concepts};
+    E --&gt; F[Propose Bounded Contexts];
+    F --&gt; G[Define Context Map];
+    E --&gt; H[Propose Aggregates &amp; Value Objects];
+    H --&gt; I[Define Aggregate Operations &amp; Invariants];
+    I --&gt; J[Define Domain Events];
+    subgraph "Strategic Design"
+        F &amp; G
+    end
+    subgraph "Tactical Design"
+        H &amp; I &amp; J
+    end
+    J --&gt; K[Output: Full AI-DAA Document];</code></pre>
+<ol>
+<li><strong>Analysis of the PRD:</strong> The AI first parses the structured PRD, identifying the key "nouns" (e.g., "Booking," "Room," "User," "Reservation") and "verbs" (e.g., "reserve," "cancel," "confirm," "check-in").</li>
+<li><strong>Strategic Design (The Big Picture):</strong> The AI groups related concepts to propose logical boundaries (<code>Bounded Contexts</code>) and defines the relationships between them (<code>Context Map</code>).</li>
+<li><strong>Tactical Design (The Details):</strong> Within each context, the AI applies tactical DDD patterns, identifying <code>Aggregates</code>, <code>Entities</code>, <code>Value Objects</code>, and modeling the "verbs" as <code>Operations</code> with <code>Invariants</code> and <code>Domain Events</code>.</li>
+</ol>
+<h4 id="the-daa-as-an-executable-specification">The DAA as an Executable Specification<a class="headerlink" href="#the-daa-as-an-executable-specification" title="Permanent link">&para;</a></h4>
+<p>The final AI-DAA document, with its detailed pseudocode, serves as a precise, executable specification for the business logic. Because it is <strong>100% technology-agnostic</strong>, it is structurally rigorous but maximally flexible, making it the perfect input for the next phase where concrete technical decisions will be applied.</p>
+<p><em>Example Snippet: An Aggregate from a DAA</em>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>AGGREGATE: Booking
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  AGGREGATE_ROOT: Booking
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    IDENTITY: booking_id (UUID)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    ATTRIBUTES:
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>      user_id: UserID
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>      room_id: RoomID
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>      status: BookingStatus (value object)
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>      time_slot: TimeSlot (value object, with start_time and end_time)
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    INVARIANTS:
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>      - Booking status must follow valid state machine transitions.
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>      - Only confirmed bookings can be cancelled.
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>      - A room cannot have overlapping bookings for the same time slot.
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>      - Completed bookings are terminal.
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    OPERATIONS:
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>      cancel(reason: String) → BookingCancelled
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        PRECONDITION: status = confirmed
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        POSTCONDITION: status = cancelled
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        DOMAIN_EVENT: BookingCancelled
+</span></code></pre></div></p>
+<h3 id="the-architectural-playbook">The Architectural Playbook<a class="headerlink" href="#the-architectural-playbook" title="Permanent link">&para;</a></h3>
+<p>The Architectural Playbook is a living document that serves as the codified architectural wisdom of an engineering organization. It is a curated library of approved solutions to common, recurring cross-cutting concerns. Its primary purpose is to empower the AI to be a more effective "Socratic Sparring Partner" during the Collaborative Design phase.</p>
+<ul>
+<li>
+<p><strong>Purpose:</strong> To ensure consistency, share knowledge, and accelerate design by providing a set of vetted, reusable patterns. It is the "how" to the "what" of a high-level technical strategy.</p>
+</li>
+<li>
+<p><strong>Structure of a Playbook Entry:</strong> Each pattern in the playbook should be a self-contained guide with a clear, consistent structure:</p>
+<ul>
+<li><strong>Pattern:</strong> A descriptive name (e.g., "Transactional Outbox Pattern," "Idempotent API Endpoint Design").</li>
+<li><strong>Problem:</strong> A clear description of the recurring problem this pattern solves (e.g., "How to guarantee atomicity between a database write and an asynchronous message publish?").</li>
+<li><strong>Context:</strong> When is this pattern applicable? What are the prerequisites? When should it <em>not</em> be used?</li>
+<li><strong>Solution:</strong> A detailed description of the implementation, often including diagrams-as-code.</li>
+<li><strong>Checklist for Edge Cases:</strong> A list of critical details to consider during implementation (e.g., "How will the message relay handle poison pills? What monitoring is required for the outbox table size?").</li>
+<li><strong>Trade-offs:</strong> An honest assessment of the pros (e.g., "Guarantees at-least-once delivery") and cons (e.g., "Increases implementation complexity, introduces potential for message latency").</li>
+</ul>
+</li>
+<li>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li><strong>Consistency:</strong> Ensures all teams solve common problems in the same, approved way.</li>
+<li><strong>Knowledge Sharing:</strong> Captures senior engineering expertise in a format that is accessible to all, including the AI.</li>
+<li><strong>Empowers the AI:</strong> Provides a high-quality, curated knowledge base that the AI can use to challenge designs and suggest well-vetted alternatives, significantly improving the quality of the human-AI collaboration.</li>
+</ul>
+</li>
+</ul>
+<h3 id="tip-vs-rfc-from-proposal-to-peer-review">TIP vs. RFC: From Proposal to Peer Review<a class="headerlink" href="#tip-vs-rfc-from-proposal-to-peer-review" title="Permanent link">&para;</a></h3>
+<p>A <strong>TIP (Technical Implementation Proposal)</strong> is the engineer's initial, self-generated proposal for how to build a feature. It is the starting point for the Lightweight Workflow. An <strong>RFC (Request for Comments)</strong> is the formal document used for collaborative review and refinement; it is the forum for the design discussion.</p>
+<p>A TIP is often the <em>seed</em> that grows into an RFC.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Aspect</th>
+<th style="text-align: left;"><strong>TIP (Technical Implementation Proposal)</strong></th>
+<th style="text-align: left;"><strong>RFC (Request for Comments)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Author</strong></td>
+<td style="text-align: left;">A single engineer.</td>
+<td style="text-align: left;">Collaborative. Starts with a TIP or DAA, then refined by the team.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Purpose</strong></td>
+<td style="text-align: left;">To be an engineer's first-pass design draft; their initial thoughts on "how."</td>
+<td style="text-align: left;">To solicit feedback and drive discussion toward a final, approved design.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Scope</strong></td>
+<td style="text-align: left;">Represents one perspective. Often a "brain dump" of schema, APIs, etc.</td>
+<td style="text-align: left;">A more formal document that incorporates wider architectural constraints (ADRs).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Analogy</strong></td>
+<td style="text-align: left;">An engineer's detailed personal notes or a <strong>draft proposal</strong>.</td>
+<td style="text-align: left;">The official document circulated for <strong>peer review</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Workflow Step</strong></td>
+<td style="text-align: left;">An <strong>input</strong> to the design process.</td>
+<td style="text-align: left;">The <strong>forum</strong> for the design process.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-use-case-the-journey-of-a-feature">Example Use Case: The Journey of a Feature<a class="headerlink" href="#example-use-case-the-journey-of-a-feature" title="Permanent link">&para;</a></h4>
+<p>Let's trace a simple "Booking Notes" feature in the <strong>Lightweight Workflow</strong>.</p>
+<ol>
+<li>
+<p><strong>The PRD:</strong> A new PRD arrives: "As a user, I want to add notes to my booking so I can remember special requests."</p>
+</li>
+<li>
+<p><strong>The Engineer's TIP:</strong> The engineer decides this is a simple feature and creates a <code>TIP</code> to structure their thoughts.</p>
+<ul>
+<li><strong><code>add_booking_notes_tip.md</code> (Excerpt):</strong>
+    &gt; <strong>DB Change:</strong> Add a <code>notes TEXT</code> column to the <code>bookings</code> table.
+    &gt; <strong>API Endpoint:</strong> <code>PUT /v1/bookings/{booking_id}/notes</code>
+    &gt; <strong>Validation:</strong> Notes must be 0-500 characters.
+    &gt; <strong>Question:</strong> Do we need to audit-log notes changes?</li>
+</ul>
+</li>
+<li>
+<p><strong>The Draft RFC:</strong> The engineer formalizes this by creating <code>RFC-002_Booking_Notes.md</code>. They copy the TIP into the "Proposed Implementation" section and add the other standard RFC sections. The "Open Questions" section now includes the auditing question.</p>
+</li>
+<li>
+<p><strong>The Collaborative Review (RFC stage):</strong> The RFC is shared with the team and the AI.</p>
+<ul>
+<li>A teammate comments: "Good point on auditing. Given our compliance rules, we should add an <code>audit_events</code> table."</li>
+<li>The architect prompts the AI: <em>"Review this RFC. Does the proposed <code>PUT</code> endpoint align with our API standards in the Playbook?"</em></li>
+<li>The AI responds: <em>"Our Playbook prefers <code>PATCH</code> for partial updates to align with JSON Patch standards (RFC 6902). Consider changing to <code>PATCH /v1/bookings/{booking_id}</code>."</em></li>
+</ul>
+</li>
+<li>
+<p><strong>The Final RFC &amp; ADR:</strong> The engineer updates the RFC with the feedback. This refined design is approved, and the key decisions are recorded in a new <code>AI-ADR</code>. The feature is now ready for construction.</p>
+</li>
+</ol>
+<h3 id="the-ai-adr-architectural-decision-record">The AI-ADR (Architectural Decision Record)<a class="headerlink" href="#the-ai-adr-architectural-decision-record" title="Permanent link">&para;</a></h3>
+<p>The AI-ADR is the final, immutable output of the Collaborative Design phase. It is more than just a document; it is the <strong>executable specification for the technical implementation</strong>. Generated by the AI after the "Socratic Sparring" session is complete, it represents the consensus reached between the engineer's proposal, the AI's challenges, and the guidance from the Architectural Playbook.</p>
+<h4 id="purpose-and-value">Purpose and Value<a class="headerlink" href="#purpose-and-value" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Clarity and Alignment:</strong> It provides a single source of truth for the development team on <em>how</em> a system should be built, eliminating ambiguity before implementation begins.</li>
+<li><strong>Traceability:</strong> Crucially, it links the chosen technical solution directly back to the business requirements in the DAA. Each decision should be justifiable in the context of the domain model.</li>
+<li><strong>Onboarding and Knowledge Sharing:</strong> ADRs serve as a historical record of the project's architectural evolution. New team members can read them to quickly understand not just <em>what</em> was built, but <em>why</em> it was built that way.</li>
+<li><strong>Input for Construction:</strong> The AI-ADR is the direct input for the AI during the Construction phase. Its structured nature allows the AI to generate code, tests, and infrastructure configurations with high fidelity.</li>
+</ul>
+<h4 id="structure-of-an-ai-adr">Structure of an AI-ADR<a class="headerlink" href="#structure-of-an-ai-adr" title="Permanent link">&para;</a></h4>
+<p>An AI-ADR should be a clear, structured document. The AI can be prompted to generate it using a standard template:</p>
+<ul>
+<li><strong>Title:</strong> A descriptive name for the decision (e.g., "ADR-003: Asynchronous Event-Driven Communication for User Notifications").</li>
+<li><strong>Status:</strong> Proposed, Accepted, Deprecated.</li>
+<li><strong>Context:</strong> What is the problem or feature we are designing? (This section should link directly to the relevant parts of the DAA or PRD).</li>
+<li><strong>Decision:</strong> A clear and concise statement of the chosen architectural approach.<ul>
+<li><em>Example:</em> "We will implement a Transactional Outbox Pattern to ensure reliable, at-least-once delivery of <code>BookingConfirmed</code> events to a Kafka topic. The <code>Notification</code> service will be the consumer."</li>
+</ul>
+</li>
+<li><strong>Rationale &amp; Trade-offs:</strong> This is the most important section. It explains <em>why</em> this decision was made and what alternatives were considered.<ul>
+<li><em>Example:</em> "A synchronous API call was considered but rejected due to the risk of tight coupling and cascading failures (as identified in the Collaborative Discussion). While the Outbox pattern adds implementation complexity, the requirement for guaranteed notification delivery outweighs this cost. The trade-off of potential message latency is acceptable for this use case."</li>
+</ul>
+</li>
+<li><strong>Implementation Details:</strong> High-level details for the construction phase, such as database schema changes, API contracts, or diagrams-as-code illustrating the final flow.</li>
+</ul>
+<h4 id="the-adr-as-an-executable-spec">The ADR as an "Executable Spec"<a class="headerlink" href="#the-adr-as-an-executable-spec" title="Permanent link">&para;</a></h4>
+<p>The AI-ADR is not just documentation that gets filed away. Because it is so structured and detailed, it becomes the direct specification for the AI in the next phase. The engineer can take a specific part of the ADR (like an API contract) and prompt the AI: <em>"Based on this ADR, generate the Go boilerplate for this API handler."</em> This makes the ADR a living, executable artifact that directly guides code generation.</p>
+<hr />
+<h2 id="pragmatism-adaptability">Pragmatism &amp; Adaptability<a class="headerlink" href="#pragmatism-adaptability" title="Permanent link">&para;</a></h2>
+<p>The AirSDLC is not a rigid, one-size-fits-all process. The level of ceremony should match the complexity and risk of the feature being built. The goal is to invest time where it yields the highest return in clarity and quality.</p>
+<h3 id="the-hybrid-model-smart-selectivity">The Hybrid Model: Smart Selectivity<a class="headerlink" href="#the-hybrid-model-smart-selectivity" title="Permanent link">&para;</a></h3>
+<p>Based on the context (feature complexity, team maturity, timeline), choose the appropriate workflow:</p>
+<ul>
+<li><strong>For Simple/Well-Understood Features:</strong> A <strong>Lightweight Workflow</strong> is often sufficient. The engineer reads the PRD and writes a <strong>TIP (Technical Implementation Proposal)</strong> directly. The formal DAA is skipped, but the process is still structured.</li>
+<li><strong>For Complex/Unfamiliar Features:</strong> The <strong>Full Workflow</strong> (including the AI-DAA) is recommended to de-risk the project and ensure a deep domain understanding.</li>
+<li><strong>For Critical/High-Risk Features:</strong> The Full Workflow is essential. The upfront investment in domain modeling and risk analysis prevents costly errors downstream.</li>
+</ul>
+<h3 id="the-decision-matrix">The Decision Matrix<a class="headerlink" href="#the-decision-matrix" title="Permanent link">&para;</a></h3>
+<p>Use a simple matrix to decide which path to take:</p>
+<table>
+<thead>
+<tr>
+<th>Context</th>
+<th>Recommended Approach</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Feature Complexity:</strong> Simple CRUD</td>
+<td>Lightweight (PRD → TIP → RFC)</td>
+</tr>
+<tr>
+<td><strong>Feature Complexity:</strong> Complex Business Logic</td>
+<td>Full (PRD → DAA → RFC)</td>
+</tr>
+<tr>
+<td><strong>Team Maturity:</strong> Senior Engineers</td>
+<td>Lightweight</td>
+</tr>
+<tr>
+<td><strong>Team Maturity:</strong> Junior Engineers</td>
+<td>Full (to teach structured thinking)</td>
+</tr>
+<tr>
+<td><strong>Timeline:</strong> Urgent</td>
+<td>Lightweight</td>
+</tr>
+<tr>
+<td><strong>Timeline:</strong> Strategic/Long-Term</td>
+<td>Full</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="the-principle-of-validation">The Principle of Validation<a class="headerlink" href="#the-principle-of-validation" title="Permanent link">&para;</a></h2>
+<p>While the level of upfront design can be adapted, <strong>validation should never be skipped</strong>. AI-driven validation is a high-leverage, low-cost safety net that should be applied in all workflow variants.</p>
+<ul>
+<li><strong>RFC-to-PRD Coverage:</strong> Even in a lightweight workflow, use the AI to generate a "Coverage Report" that compares the engineer's TIP/RFC against the original PRD. This catches misunderstandings before a line of code is written.</li>
+<li><strong>Code-to-RFC Compliance:</strong> After implementation, use the AI to generate a "Compliance Report" that verifies the final code adheres to the decisions in the ADR.</li>
+</ul>
+<p>This validation-first approach ensures that even when moving fast, we are still building the <em>right thing</em> correctly.</p>
+<hr />
+<h2 id="the-payoff-end-to-end-traceability">The Payoff: End-to-End Traceability<a class="headerlink" href="#the-payoff-end-to-end-traceability" title="Permanent link">&para;</a></h2>
+<p>A key benefit of the AirSDLC is the creation of a fully traceable chain of artifacts. This allows for unprecedented "coverage metrics," providing clear insight into complexity, effort, and the direct link between business goals and technical strategy.</p>
+<p><strong>Traceability Chain:</strong>
+<code>Business Goal → AI-PRD Feature → AI-DAA Aggregate/Operation → AI-ADR Technology Choice → Implementation Effort</code></p>
+<p>This chain is not just documentation; it is a machine-readable graph of the entire project. This opens up the possibility of <strong>automated metrics and reporting</strong>, allowing for real-time analysis of project complexity and progress.</p>
+<hr />
+<h2 id="integrating-ai-dlc-rituals-into-the-airsdlc-workflow">Integrating AI-DLC Rituals into the AirSDLC Workflow<a class="headerlink" href="#integrating-ai-dlc-rituals-into-the-airsdlc-workflow" title="Permanent link">&para;</a></h2>
+<p>The AirSDLC is a practical implementation of the theoretical AI-DLC framework. This section describes how the core AI-DLC rituals and concepts are integrated into the day-to-day AirSDLC workflow.</p>
+<h3 id="the-unit-of-work-as-a-validated-daa">The "Unit of Work" as a Validated DAA<a class="headerlink" href="#the-unit-of-work-as-a-validated-daa" title="Permanent link">&para;</a></h3>
+<p>In formal AI-DLC, the <code>Unit of Work (UoW)</code> is the primary, validated output of the Inception phase. In AirSDLC, this is concretely represented by the <strong>Validated AI-DAA</strong> (and its source AI-PRD). The DAA serves as the immutable technical contract and single source of truth for what needs to be built, perfectly fulfilling the role of the UoW.</p>
+<h3 id="the-mob-elaboration-ritual">The "Mob Elaboration" Ritual<a class="headerlink" href="#the-mob-elaboration-ritual" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>AI-DLC Theory:</strong> A "mob" of stakeholders convenes to validate and refine AI-generated requirements in real-time.</li>
+<li><strong>AirSDLC Practice:</strong> This ritual is implemented during <strong>Phase 1: Inception</strong>. After the AI generates the initial <code>AI-PRD</code> and <code>AI-DAA</code>, the human expert (the "mob," which can be a single architect or a small team) reviews these artifacts. The key activity is the validation and refinement of the DAA, ensuring it accurately models the business domain. This focused session replaces weeks of traditional backlog grooming and clarification meetings.</li>
+</ul>
+<h3 id="the-mob-construction-ritual">The "Mob Construction" Ritual<a class="headerlink" href="#the-mob-construction-ritual" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>AI-DLC Theory:</strong> A technical "mob" reviews and validates AI-proposed architecture and code.</li>
+<li><strong>AirSDLC Practice:</strong> This is the heart of <strong>Phase 2: Collaborative Design</strong>. The "mob" (the architect or senior engineer) engages the AI as a "Socratic Sparring Partner." Using the <code>Architectural Playbook</code>, the mob directs the AI to explore alternatives, identify risks, and challenge assumptions in the initial RFC. This is an active, collaborative design session that results in a robust <code>AI-ADR</code>.</li>
+</ul>
+<h3 id="bolts-as-actionable-adr-components">"Bolts" as Actionable ADR Components<a class="headerlink" href="#bolts-as-actionable-adr-components" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>AI-DLC Theory:</strong> <code>Bolts</code> are short, focused implementation cycles measured in hours or days.</li>
+<li><strong>AirSDLC Practice:</strong> A <code>Bolt</code> corresponds to a specific, actionable component from the finalized <code>AI-ADR</code>. For example, after the ADR for the "Room Booking System" is approved, a single Bolt could be "Implement the <code>POST /bookings</code> endpoint and its service logic." During <strong>Phase 3: Construction</strong>, the engineer prompts the AI to generate the code for one Bolt at a time, ensuring focus and quality.</li>
+</ul>
+<h3 id="continuous-oversight-in-operations">"Continuous Oversight" in Operations<a class="headerlink" href="#continuous-oversight-in-operations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>AI-DLC Theory:</strong> Humans validate the AI's operational proposals in production.</li>
+<li><strong>AirSDLC Practice:</strong> This is implemented in the latter part of <strong>Phase 3: Operation</strong>. The AI uses the full traceability chain (from DAA to ADR to code) to provide context-aware monitoring. For example, if it detects a latency spike, it can correlate it to the specific NFR in the original PRD and the service defined in the ADR, allowing it to propose a highly relevant scaling action for human approval.</li>
+</ul>
+<hr />
+<h2 id="post-deployment-bug-incident-handling">Post-Deployment: Bug &amp; Incident Handling<a class="headerlink" href="#post-deployment-bug-incident-handling" title="Permanent link">&para;</a></h2>
+<p>A key advantage of the AirSDLC is its ability to handle post-deployment issues with unprecedented context and speed. The end-to-end traceability established during the design phase becomes a powerful tool for debugging and resolution. The process follows the core principle of "AI-Driven Execution with Human Oversight."</p>
+<h3 id="the-context-aware-incident-response-loop">The Context-Aware Incident Response Loop<a class="headerlink" href="#the-context-aware-incident-response-loop" title="Permanent link">&para;</a></h3>
+<p>When a bug or production incident occurs, the response is not a manual scramble through logs. Instead, it's a structured, human-initiated, AI-assisted investigation that leverages the entire chain of artifacts.</p>
+<pre class="mermaid"><code>graph TD
+    A[Alert: Production Error Detected] --&gt; B(Human Engineer: Gathers Logs &amp; Context);
+    B --&gt; C{AI Triage &amp; Correlation};
+    C --&gt; D[Correlate Error to Code, Bolt, ADR, DAA, &amp; PRD];
+    D --&gt; E[Propose Root Cause &amp; Initial Fix];
+    E --&gt; F{Human Validation};
+    F -- Approve --&gt; G[AI Generates Hotfix PR];
+    F -- Reject/Refine --&gt; E;
+    G --&gt; H[Standard CI/CD &amp; Deployment];</code></pre>
+<p><strong>Step 1: Human-Led Triage &amp; AI Correlation</strong>
+- <strong>Human Action (Proactive Gathering):</strong> The process begins with the on-call engineer. Upon receiving a production alert, the engineer's first step is to proactively gather the relevant artifacts. This includes specific error messages, relevant log snippets from the time of the incident, and the stack trace.
+- <strong>Input for AI:</strong> The engineer provides this curated set of information to the AI.
+- <strong>AI Action (Correlation):</strong> With this high-quality input, the AI's task becomes much more precise. It uses the stack trace to pinpoint the exact line of code and then leverages the full traceability chain:
+    1.  It identifies the <strong>"Bolt"</strong> that produced this code during the Construction phase.
+    2.  It compares the code with the intent of the Bolt and the final <strong>AI-ADR</strong>. This is crucial for detecting "implementation drift."
+    3.  It traces the ADR back to the governing principles in the <strong>AI-DAA</strong> and the original <strong>PRD</strong> requirement.
+- <strong>Output:</strong> The AI presents a "Triage Summary" that now includes implementation-vs-design analysis.
+    - <em>Example:</em> "Based on the logs provided, the error is <code>DB-Constraint-Violation</code> in <code>booking_service.go:152</code>.
+      - <strong>Correlation:</strong> This code was generated as part of <strong>Bolt-007 ('Implement Booking Creation')</strong>.
+      - <strong>Analysis:</strong> The governing design, <strong>ADR-002</strong>, specifies that booking time slot uniqueness should be enforced at the database level to prevent double-booking. However, the code generated for Bolt-007 only implemented an application-level check. This mismatch between the ADR and the implementation is the likely root cause.
+      - <strong>Origin:</strong> This requirement traces back to the <strong>DAA invariant <code>A room cannot have overlapping bookings for the same time slot</code></strong>."</p>
+<p><strong>Step 2: AI-Proposed Remediation</strong>
+- <strong>AI Action:</strong> Based on its contextual understanding, the AI proposes a holistic solution.
+    - <strong>Root Cause Analysis:</strong> It explains the likely logical flaw (e.g., "The ADR did not specify a database-level unique constraint for overlapping time slots, relying only on an application-level check which is susceptible to race conditions.").
+    - <strong>Proposed Fix:</strong> It suggests a code change (e.g., "Add a database constraint or exclusion constraint to prevent overlapping bookings for the same room and time slot, and update the repository code to handle the potential database error gracefully.").</p>
+<p><strong>Step 3: Human Validation and Decision</strong>
+- <strong>Human Role:</strong> The engineer's role is to validate the AI's analysis and decision, not hunt for the problem.
+- <strong>Action:</strong> The engineer reviews the Triage Summary and the proposed fix. They might ask the AI to refine it ("What if we handle this at the application layer with distributed locking instead?"). Once the engineer approves a course of action, they give the command to proceed.</p>
+<p><strong>Step 4: AI-Generated Hotfix</strong>
+- <strong>AI Action:</strong> Upon approval, the AI generates a pull request containing the code changes, updates to unit tests, and an updated version of the <strong>AI-ADR</strong> to reflect the new architectural reality. This keeps the documentation from going stale.
+- <strong>Human Role:</strong> The engineer reviews the PR, merges it, and monitors the deployment.</p>
+<p>This process transforms bug handling from a reactive investigation into a structured, efficient, and context-rich review process, dramatically reducing the Mean Time To Resolution (MTTR).</p>
+<hr />
+<h2 id="operational-readiness-the-on-call-playbook">Operational Readiness: The On-Call Playbook<a class="headerlink" href="#operational-readiness-the-on-call-playbook" title="Permanent link">&para;</a></h2>
+<p>The AirSDLC framework extends beyond deployment into operations. The same principles of AI-augmentation and end-to-end traceability are applied to incident management through a dedicated <strong>On-Call Playbook</strong>.</p>
+<p>The philosophy is to transform on-call from a reactive, stressful process into a structured, context-aware investigation. The on-call engineer acts as an "Incident Commander," directing the AI which serves as a powerful SRE, using the full Knowledge Repository to rapidly correlate problems and propose solutions.</p>
+<p>This operational framework is detailed in its own document, which provides a complete guide to AI-augmented incident response, including specific runbooks for common alerts.</p>
+<p><strong>For the complete framework, see the [[notebooks/ai/ai-on-call-playbook.md]].</strong></p>
+<hr />
+<h2 id="the-airsdlc-ecosystem-from-framework-to-platform">The AirSDLC Ecosystem: From Framework to Platform<a class="headerlink" href="#the-airsdlc-ecosystem-from-framework-to-platform" title="Permanent link">&para;</a></h2>
+<p>It is critical to distinguish between the <strong>AirSDLC Framework</strong> and the <strong>tools</strong> that implement it. This document describes the framework—a set of conventions, artifacts, and state-management rules. To bring this framework to life, an ecosystem of tools can be built on top of it.</p>
+<p>This separation allows for flexibility and a phased approach to adoption. Different tools can serve different roles, all operating on the same standardized repository of artifacts.</p>
+<h3 id="future-vision-the-knowledge-hub">Future Vision: The Knowledge Hub<a class="headerlink" href="#future-vision-the-knowledge-hub" title="Permanent link">&para;</a></h3>
+<p>The long-term vision is to build a comprehensive web platform—a <strong>Knowledge Hub</strong>—that consumes the artifacts produced by implementation tools. This Hub would serve as the central nervous system for an entire engineering organization, providing:</p>
+<ul>
+<li><strong>Visual Knowledge Graph Exploration:</strong> Allowing anyone from a PM to an on-call engineer to trace the full lifecycle of a feature.</li>
+<li><strong>AI-Enhanced Collaboration:</strong> Facilitating design reviews and team coordination with an AI as an active participant.</li>
+<li><strong>Portfolio and Project Management:</strong> Offering a true, AI-native alternative to traditional project management tools like Jira by providing automated status tracking, AI-powered forecasting, and high-level roadmap planning.</li>
+</ul>
+<p>This platform represents the ultimate goal: a fully integrated environment that replaces the friction of the traditional software development lifecycle with an intelligent, streamlined, and knowledge-centric workflow.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../extensibility/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Extensibility">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Extensibility
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../examples/" class="md-footer__link md-footer__link--next" aria-label="Next: Examples">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Examples
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 AirsStack
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/airsstack" target="_blank" rel="noopener" title="AirsStack on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2031 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The AI-Responsible Software Development Lifecycle - A Framework for AI-Driven Development">
+      
+      
+        <meta name="author" content="AirsStack">
+      
+      
+        <link rel="canonical" href="https://airsstack.github.io/airsdlc/lifecycle/">
+      
+      
+        <link rel="prev" href="../philosophy/">
+      
+      
+        <link rel="next" href="../artifacts/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Lifecycle - AirSDLC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#airsdlc-lifecycle" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div class="md-banner">
+  <div class="md-banner__inner md-grid md-typeset">
+    📚 AirSDLC Framework Specification - A comprehensive guide for AI-driven development
+  </div>
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="AirSDLC" class="md-header__button md-logo" aria-label="AirSDLC" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AirSDLC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lifecycle
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/airsstack/airsdlc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    airsstack/airsdlc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../philosophy/" class="md-tabs__link">
+          
+  
+  
+  Framework Specification
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../core/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../examples/" class="md-tabs__link">
+          
+  
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../AI-DLC-ATTRIBUTION/" class="md-tabs__link">
+          
+  
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AirSDLC" class="md-nav__button md-logo" aria-label="AirSDLC" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AirSDLC
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/airsstack/airsdlc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    airsstack/airsdlc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Framework Specification
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Framework Specification
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Philosophy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lifecycle
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lifecycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-1-inception-the-what" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: Inception (The "WHAT")
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 1: Inception (The &#34;WHAT&#34;)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#human-validation-gate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Human Validation Gate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-full-vs-lightweight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use Full vs. Lightweight
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-2-collaborative-design-the-how" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Collaborative Design (The "HOW")
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 2: Collaborative Design (The &#34;HOW&#34;)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#human-validation-gate_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Human Validation Gate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-3-construction-operations-the-build-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Construction &amp; Operations (The "BUILD &amp; RUN")
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 3: Construction &amp; Operations (The &#34;BUILD &amp; RUN&#34;)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-a-construction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part A: Construction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part B: Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-knowledge-repository-the-connecting-thread" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Knowledge Repository: The Connecting Thread
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lifecycle-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lifecycle Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../artifacts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Artifacts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extensibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensibility
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complete Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AI-DLC-ATTRIBUTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-DLC Attribution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-1-inception-the-what" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: Inception (The "WHAT")
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 1: Inception (The &#34;WHAT&#34;)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#human-validation-gate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Human Validation Gate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-full-vs-lightweight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use Full vs. Lightweight
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-2-collaborative-design-the-how" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Collaborative Design (The "HOW")
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 2: Collaborative Design (The &#34;HOW&#34;)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#human-validation-gate_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Human Validation Gate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-3-construction-operations-the-build-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Construction &amp; Operations (The "BUILD &amp; RUN")
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 3: Construction &amp; Operations (The &#34;BUILD &amp; RUN&#34;)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-a-construction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part A: Construction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part B: Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-knowledge-repository-the-connecting-thread" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Knowledge Repository: The Connecting Thread
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lifecycle-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lifecycle Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="airsdlc-lifecycle">AirSDLC Lifecycle<a class="headerlink" href="#airsdlc-lifecycle" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The AirSDLC lifecycle is built on a <strong>sequential knowledge handoff</strong> model. Each phase transforms and enriches the context from the previous phase, creating an unbroken chain of traceability from business intent to production code.</p>
+<pre class="mermaid"><code>graph TD
+    A[Business Intent] --&gt; B(Phase 1: Inception)
+    B --&gt; C[Artifact: AI-DAA]
+    C --&gt; D(Phase 2: Collaborative Design)
+    D --&gt; E[Artifact: AI-ADR]
+    E --&gt; F(Phase 3: Construction &amp; Operations)
+    F --&gt; G[Production Code &amp; Monitoring]</code></pre>
+<h2 id="phase-1-inception-the-what">Phase 1: Inception (The "WHAT")<a class="headerlink" href="#phase-1-inception-the-what" title="Permanent link">&para;</a></h2>
+<h3 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">&para;</a></h3>
+<p>Translate an ambiguous business goal into a pure, technology-agnostic, and validated model of the business domain.</p>
+<h3 id="input">Input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Business Intent</strong>: A high-level description of what needs to be built (e.g., "We need a room booking system")</li>
+<li><strong>Product Requirements Document (PRD)</strong>: Structured requirements including user stories, acceptance criteria, and success metrics</li>
+</ul>
+<h3 id="process">Process<a class="headerlink" href="#process" title="Permanent link">&para;</a></h3>
+<h4 id="step-1-choose-the-workflow-path">Step 1: Choose the Workflow Path<a class="headerlink" href="#step-1-choose-the-workflow-path" title="Permanent link">&para;</a></h4>
+<p>The lead engineer or architect assesses the feature's context to determine the appropriate level of upfront modeling:</p>
+<p><strong>Decision Matrix:</strong></p>
+<pre class="mermaid"><code>graph TD
+    Start[Assess Feature Context] --&gt; Q1{Is domain complex&lt;br/&gt;or unfamiliar?}
+    Q1 --&gt;|Yes| Full1[Full Workflow&lt;br/&gt;AI-DAA]
+    Q1 --&gt;|No| Q2{Is feature&lt;br/&gt;high-risk or&lt;br/&gt;mission-critical?}
+
+    Q2 --&gt;|Yes| Full2[Full Workflow&lt;br/&gt;AI-DAA]
+    Q2 --&gt;|No| Q3{Are junior team&lt;br/&gt;members involved?}
+
+    Q3 --&gt;|Yes, for learning| Full3[Full Workflow&lt;br/&gt;AI-DAA]
+    Q3 --&gt;|No| Q4{Is feature simple&lt;br/&gt;and well-understood?}
+
+    Q4 --&gt;|Yes| Light1[Lightweight Workflow&lt;br/&gt;TIP]
+    Q4 --&gt;|No| Q5{Tight deadline?}
+
+    Q5 --&gt;|Yes| Light2[Lightweight Workflow&lt;br/&gt;TIP with validation]
+    Q5 --&gt;|No| Full4[Full Workflow&lt;br/&gt;AI-DAA]</code></pre>
+<h4 id="step-2a-full-workflow-generate-ai-daa">Step 2A: Full Workflow - Generate AI-DAA<a class="headerlink" href="#step-2a-full-workflow-generate-ai-daa" title="Permanent link">&para;</a></h4>
+<p>For complex or high-risk features, the AI generates a <strong>Domain Architecture Analysis (AI-DAA)</strong>:</p>
+<ol>
+<li><strong>Parse the PRD</strong>: AI identifies key "nouns" (entities) and "verbs" (operations)</li>
+<li><strong>Apply Strategic DDD</strong>: AI proposes Bounded Contexts and Context Maps</li>
+<li><strong>Apply Tactical DDD</strong>: AI defines Aggregates, Entities, Value Objects, and Domain Events</li>
+<li><strong>Generate Pseudocode</strong>: AI writes technology-agnostic pseudocode for all operations</li>
+<li><strong>Validate Invariants</strong>: AI explicitly documents business rules and constraints</li>
+</ol>
+<p><strong>Key Characteristics of a Well-Formed DAA:</strong>
+- ✅ 100% technology-neutral (no databases, frameworks, or languages mentioned)
+- ✅ Uses DDD patterns consistently
+- ✅ All business invariants are explicit
+- ✅ Every user story from the PRD maps to at least one operation
+- ✅ Written in clear pseudocode understandable by non-technical domain experts</p>
+<h4 id="step-2b-lightweight-workflow-write-tip">Step 2B: Lightweight Workflow - Write TIP<a class="headerlink" href="#step-2b-lightweight-workflow-write-tip" title="Permanent link">&para;</a></h4>
+<p>For simple, well-understood features, the engineer creates a <strong>Technical Implementation Proposal (TIP)</strong>:</p>
+<ol>
+<li><strong>Read the PRD</strong>: Engineer understands requirements</li>
+<li><strong>Draft Technical Details</strong>: Engineer proposes:</li>
+<li>Database schema changes</li>
+<li>API endpoints</li>
+<li>Service modifications</li>
+<li>Integration points</li>
+<li><strong>Identify Questions</strong>: Engineer flags unknowns or concerns</li>
+</ol>
+<p><strong>Key Difference from DAA:</strong>
+- ✅ Technology-specific (mentions actual databases, APIs, etc.)
+- ✅ More direct and concrete
+- ✅ Skips abstract domain modeling
+- ✅ Faster to create for simple features</p>
+<h3 id="human-validation-gate">Human Validation Gate<a class="headerlink" href="#human-validation-gate" title="Permanent link">&para;</a></h3>
+<p>Regardless of workflow path, the output must pass human validation:</p>
+<p><strong>For AI-DAA:</strong>
+- Does it accurately model the business domain?
+- Are all PRD requirements addressed?
+- Are the proposed Bounded Contexts sensible?
+- Do the invariants reflect real business rules?
+- Can a domain expert understand the pseudocode?</p>
+<p><strong>For TIP:</strong>
+- Does it address all PRD requirements?
+- Are the technical choices appropriate?
+- Are integration points clearly defined?
+- Are edge cases considered?</p>
+<p><strong>Validation Technique</strong>: Use AI to generate a "Coverage Report" that compares the DAA/TIP against the PRD, highlighting any gaps.</p>
+<h3 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Full Workflow</strong>: <strong>Validated AI-DAA</strong> - The locked domain model</li>
+<li><strong>Lightweight Workflow</strong>: <strong>Draft TIP</strong> - The engineer's initial technical proposal</li>
+</ul>
+<h3 id="when-to-use-full-vs-lightweight">When to Use Full vs. Lightweight<a class="headerlink" href="#when-to-use-full-vs-lightweight" title="Permanent link">&para;</a></h3>
+<p><strong>Use Full Workflow when:</strong>
+- The domain is unfamiliar to the team
+- The feature has high business complexity
+- The feature is mission-critical or high-risk
+- You want to teach junior engineers structured thinking
+- The feature will likely evolve significantly</p>
+<p><strong>Use Lightweight Workflow when:</strong>
+- The feature is a simple CRUD operation
+- The domain is well-understood by the team
+- The technical implementation is obvious
+- Timeline pressure requires speed
+- The team is experienced with the technology</p>
+<p><strong>Non-Negotiable</strong>: Even in the Lightweight Workflow, validation is mandatory.</p>
+<hr />
+<h2 id="phase-2-collaborative-design-the-how">Phase 2: Collaborative Design (The "HOW")<a class="headerlink" href="#phase-2-collaborative-design-the-how" title="Permanent link">&para;</a></h2>
+<h3 id="objective_1">Objective<a class="headerlink" href="#objective_1" title="Permanent link">&para;</a></h3>
+<p>Synthesize the "what" from the Inception phase with the "how" of a technical implementation, resulting in a robust architectural decision.</p>
+<h3 id="input_1">Input<a class="headerlink" href="#input_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>From Phase 1</strong>: Validated AI-DAA (Full Workflow) or Draft TIP (Lightweight Workflow)</li>
+<li><strong>Engineer's RFC</strong>: A draft Request for Comments containing:</li>
+<li>The DAA or TIP</li>
+<li>Initial technical thoughts</li>
+<li>Open questions</li>
+<li>Constraints (budget, timeline, team skills)</li>
+</ul>
+<h3 id="process_1">Process<a class="headerlink" href="#process_1" title="Permanent link">&para;</a></h3>
+<h4 id="step-1-prepare-the-rfc">Step 1: Prepare the RFC<a class="headerlink" href="#step-1-prepare-the-rfc" title="Permanent link">&para;</a></h4>
+<p>The engineer formalizes the output from Inception into an RFC document:</p>
+<p><strong>RFC Structure:</strong>
+- <strong>Title &amp; Metadata</strong>: Feature name, author, date, status
+- <strong>Context</strong>: Link to PRD, business justification
+- <strong>Problem Statement</strong>: From the DAA (if Full Workflow) or PRD summary (if Lightweight)
+- <strong>Proposed Implementation</strong>: Initial technical approach
+- <strong>Open Questions</strong>: What needs discussion?
+- <strong>Constraints</strong>: Non-negotiables (timeline, budget, compliance, etc.)</p>
+<h4 id="step-2-consult-the-architectural-playbook">Step 2: Consult the Architectural Playbook<a class="headerlink" href="#step-2-consult-the-architectural-playbook" title="Permanent link">&para;</a></h4>
+<p>Before the collaborative session, the architect identifies applicable patterns from the <strong>Architectural Playbook</strong>:</p>
+<p><strong>Example Playbook Patterns:</strong>
+- Transactional Outbox Pattern (for reliable event publishing)
+- Idempotent API Design (for at-least-once delivery guarantees)
+- Circuit Breaker Pattern (for resilient service calls)
+- CQRS Pattern (for read-heavy workloads)
+- Saga Pattern (for distributed transactions)</p>
+<p>The Playbook provides:
+- <strong>Problem description</strong>: When to use this pattern
+- <strong>Solution details</strong>: How to implement it
+- <strong>Trade-offs</strong>: Pros and cons
+- <strong>Edge case checklist</strong>: What to watch for</p>
+<h4 id="step-3-the-collaborative-discussion-ai-as-socratic-sparring-partner">Step 3: The Collaborative Discussion - AI as Socratic Sparring Partner<a class="headerlink" href="#step-3-the-collaborative-discussion-ai-as-socratic-sparring-partner" title="Permanent link">&para;</a></h4>
+<p>This is the heart of Phase 2. The architect engages in an active dialogue with the AI:</p>
+<p><strong>The Process:</strong>
+1. <strong>Provide Context</strong>: Feed the AI the RFC, DAA/TIP, and relevant Playbook patterns
+2. <strong>Prompt for Challenge</strong>: "Review this design. Challenge it. What could go wrong?"
+3. <strong>Explore Alternatives</strong>: "Propose 3 alternative approaches and compare trade-offs."
+4. <strong>Deep Dive on Risks</strong>: "How should we handle [specific edge case]?"
+5. <strong>Generate Diagrams</strong>: "Create a sequence diagram showing the event flow."
+6. <strong>Iterate</strong>: Refine the design based on AI's feedback and architect's judgment</p>
+<p><strong>Key Technique</strong>: Use <strong>diagrams-as-code</strong> (Mermaid, PlantUML) to clarify thinking. Visual representations often surface hidden assumptions.</p>
+<p><strong>Example Dialogue:</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Architect: &quot;I&#39;m proposing to use synchronous HTTP calls for booking confirmations.&quot;
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>AI: &quot;This creates tight coupling and a potential single point of failure. If the 
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>notification service is down, the booking creation will fail. Have you considered 
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>an asynchronous, event-driven approach using the Transactional Outbox Pattern 
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>from your Playbook?&quot;
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Architect: &quot;Good point. But won&#39;t that add latency to confirmations?&quot;
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>AI: &quot;Yes, there will be a slight delay (typically seconds). However, the trade-off 
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>is increased reliability and decoupling. Given your NFR states &#39;99.9% uptime for 
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>booking creation,&#39; this trade-off is favorable. The confirmation latency is acceptable 
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>for this use case based on your PRD.&quot;
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>Architect: &quot;Agreed. Generate a sequence diagram showing the outbox pattern flow.&quot;
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>AI: [Generates Mermaid diagram]
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>Architect: &quot;Perfect. How do we handle poison pills in the outbox relay?&quot;
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>AI: &quot;You should implement a dead-letter queue pattern. After 3 retry attempts, 
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>messages should be moved to a DLQ for manual investigation. This is covered in 
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>Playbook entry &#39;DLQ-001.&#39;&quot;
+</span></code></pre></div></p>
+<h4 id="step-4-finalize-the-design">Step 4: Finalize the Design<a class="headerlink" href="#step-4-finalize-the-design" title="Permanent link">&para;</a></h4>
+<p>Once the architect is satisfied that the design is robust and all major risks are addressed:</p>
+<ol>
+<li>The RFC is updated with final decisions</li>
+<li>Open questions are resolved</li>
+<li>Trade-offs are explicitly documented</li>
+</ol>
+<h3 id="human-validation-gate_1">Human Validation Gate<a class="headerlink" href="#human-validation-gate_1" title="Permanent link">&para;</a></h3>
+<p>The architect (or senior engineer) must validate:
+- ✅ Does the design respect the domain invariants from the DAA?
+- ✅ Are all trade-offs explicitly documented?
+- ✅ Have applicable Playbook patterns been considered?
+- ✅ Are edge cases addressed?
+- ✅ Is the design implementable given constraints (team skills, timeline)?
+- ✅ Have alternatives been considered and rejected with clear rationale?</p>
+<h3 id="output_1">Output<a class="headerlink" href="#output_1" title="Permanent link">&para;</a></h3>
+<p><strong>AI-ADR (Architectural Decision Record)</strong>: The finalized, immutable specification for implementation.</p>
+<p>The ADR contains:
+- <strong>Decision</strong>: The chosen technical approach
+- <strong>Rationale</strong>: Why this approach (referencing the DAA and trade-off analysis)
+- <strong>Implementation Details</strong>: High-level technical specification
+- <strong>Diagrams</strong>: Sequence diagrams, architecture diagrams (as code)
+- <strong>Rejected Alternatives</strong>: What was considered and why it was rejected
+- <strong>Edge Cases</strong>: How specific scenarios will be handled</p>
+<hr />
+<h2 id="phase-3-construction-operations-the-build-run">Phase 3: Construction &amp; Operations (The "BUILD &amp; RUN")<a class="headerlink" href="#phase-3-construction-operations-the-build-run" title="Permanent link">&para;</a></h2>
+<h3 id="objective_2">Objective<a class="headerlink" href="#objective_2" title="Permanent link">&para;</a></h3>
+<p>Use the finalized AI-ADR to generate, test, and deploy production-ready code, then provide context-aware monitoring and incident response.</p>
+<h3 id="part-a-construction">Part A: Construction<a class="headerlink" href="#part-a-construction" title="Permanent link">&para;</a></h3>
+<h4 id="input_2">Input<a class="headerlink" href="#input_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Finalized AI-ADR</strong> from Phase 2</li>
+</ul>
+<h4 id="process_2">Process<a class="headerlink" href="#process_2" title="Permanent link">&para;</a></h4>
+<p><strong>Step 1: Break into Bolts</strong>
+The project is decomposed into discrete, focused implementation units called <strong>Bolts</strong>:</p>
+<p><strong>Characteristics of a Good Bolt:</strong>
+- ✅ Single goal (e.g., "Implement the POST /bookings endpoint")
+- ✅ Completable in hours or days (not weeks)
+- ✅ Has clear acceptance criteria from the ADR
+- ✅ Produces a testable artifact</p>
+<p><strong>Example Bolt Breakdown for "Room Booking System":</strong>
+- Bolt 1: Create database migration for <code>bookings</code> and <code>rooms</code> tables
+- Bolt 2: Implement <code>POST /bookings</code> API handler
+- Bolt 3: Implement <code>BookingAggregate</code> business logic with conflict detection
+- Bolt 4: Implement Transactional Outbox relay worker for booking events
+- Bolt 5: Add monitoring dashboards for booking success/conflict metrics</p>
+<p><strong>Step 2: Implement Each Bolt</strong>
+For each Bolt, the engineer leverages AI for boilerplate generation:</p>
+<ol>
+<li><strong>Prompt AI</strong>: "Based on ADR-003, generate the Go boilerplate for the POST /bookings handler."</li>
+<li><strong>AI Generates</strong>: Route definition, handler function, input validation, error handling</li>
+<li><strong>Engineer Implements</strong>: Core business logic (conflict detection, availability checks), complex algorithms, domain-specific rules</li>
+<li><strong>AI Generates Tests</strong>: Unit tests, integration tests based on the ADR's acceptance criteria</li>
+<li><strong>Engineer Reviews</strong>: Validate tests are comprehensive</li>
+</ol>
+<p><strong>Division of Labor:</strong>
+- <strong>AI</strong>: Boilerplate, CRUD operations, standard patterns, test scaffolding
+- <strong>Human</strong>: Business logic, complex algorithms, performance optimization, security reviews</p>
+<p><strong>Step 3: Validate Against ADR</strong>
+After implementation, use AI to generate a "Compliance Report":
+- Does the code match the design in the ADR?
+- Are all edge cases from the ADR handled?
+- Do tests cover the scenarios described in the ADR?</p>
+<h4 id="output_2">Output<a class="headerlink" href="#output_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Production-Ready Code</strong>: Fully tested, reviewed code</li>
+<li><strong>Tests</strong>: Unit, integration, and end-to-end tests</li>
+<li><strong>Deployment Artifacts</strong>: IaC configurations, container images, deployment scripts</li>
+</ul>
+<h3 id="part-b-operations">Part B: Operations<a class="headerlink" href="#part-b-operations" title="Permanent link">&para;</a></h3>
+<h4 id="objective_3">Objective<a class="headerlink" href="#objective_3" title="Permanent link">&para;</a></h4>
+<p>Deploy and monitor the system using the full traceability chain for context-aware incident response.</p>
+<h4 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Code is deployed through standard CI/CD pipelines</li>
+<li>Monitoring is configured based on the success metrics from the PRD and NFRs</li>
+</ol>
+<h4 id="context-aware-monitoring">Context-Aware Monitoring<a class="headerlink" href="#context-aware-monitoring" title="Permanent link">&para;</a></h4>
+<p>The AI has access to the full Knowledge Repository:
+- PRD (what success looks like)
+- DAA (domain model and invariants)
+- ADR (technical implementation details)
+- Code (actual implementation)
+- Bolt history (what was built when)</p>
+<p>When an alert fires, the AI can:
+- Correlate metrics to specific features and design decisions
+- Identify which Bolt introduced a change
+- Trace requirements back to the original PRD</p>
+<h4 id="incident-response-process">Incident Response Process<a class="headerlink" href="#incident-response-process" title="Permanent link">&para;</a></h4>
+<p>See <a href="../operations/">Operations</a> for the complete incident handling workflow.</p>
+<p><strong>High-Level Flow:</strong>
+1. <strong>Alert Triggered</strong>: Production error or metric breach
+2. <strong>Human Gathers Context</strong>: On-call engineer collects logs, stack traces
+3. <strong>AI Correlation</strong>: AI traces error to Bolt → ADR → DAA → PRD
+4. <strong>AI Proposes Fix</strong>: Based on design intent, AI suggests a Fix-It Bolt
+5. <strong>Human Validates</strong>: Engineer reviews and approves
+6. <strong>AI Generates Hotfix PR</strong>: Code change + updated tests + ADR amendment
+7. <strong>Human Deploys</strong>: Standard CI/CD process</p>
+<hr />
+<h2 id="the-knowledge-repository-the-connecting-thread">The Knowledge Repository: The Connecting Thread<a class="headerlink" href="#the-knowledge-repository-the-connecting-thread" title="Permanent link">&para;</a></h2>
+<p>Throughout all three phases, every artifact is stored in a centralized <strong>Knowledge Repository</strong>:</p>
+<pre class="mermaid"><code>graph LR
+    PRD[PRD] --&gt; DAA[AI-DAA]
+    DAA --&gt; ADR[AI-ADR]
+    ADR --&gt; Bolt1[Bolt 1]
+    ADR --&gt; Bolt2[Bolt 2]
+    ADR --&gt; Bolt3[Bolt 3]
+    Bolt1 --&gt; Code[Production Code]
+    Bolt2 --&gt; Code
+    Bolt3 --&gt; Code
+    Code --&gt; Incident[Production Incident]
+    Incident --&gt; Postmortem[Post-mortem]
+    Postmortem --&gt; PRD</code></pre>
+<p>This repository enables:
+- <strong>Traceability</strong>: Follow any feature from business goal to deployed code
+- <strong>Impact Analysis</strong>: "Which PRD features are affected by this service outage?"
+- <strong>Complexity Metrics</strong>: "How many Aggregates does this feature touch?"
+- <strong>Knowledge Capture</strong>: Design decisions are never lost</p>
+<hr />
+<h2 id="lifecycle-summary">Lifecycle Summary<a class="headerlink" href="#lifecycle-summary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Input</th>
+<th>Process</th>
+<th>Output</th>
+<th>Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Inception</strong></td>
+<td>PRD</td>
+<td>AI generates DAA or Engineer writes TIP</td>
+<td>Validated DAA or Draft TIP</td>
+<td>Hours to 1 day</td>
+</tr>
+<tr>
+<td><strong>Design</strong></td>
+<td>DAA/TIP + RFC</td>
+<td>Human-AI collaborative design</td>
+<td>Finalized AI-ADR</td>
+<td>Hours to 2 days</td>
+</tr>
+<tr>
+<td><strong>Construction</strong></td>
+<td>AI-ADR</td>
+<td>Break into Bolts, AI generates boilerplate</td>
+<td>Production code</td>
+<td>Days to weeks</td>
+</tr>
+<tr>
+<td><strong>Operations</strong></td>
+<td>Deployed code + Repository</td>
+<td>Monitor, correlate, respond</td>
+<td>Stable production + Post-mortems</td>
+<td>Ongoing</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Next</strong>: <a href="../artifacts/">Artifacts</a> - Detailed specifications for each artifact type</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../philosophy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Philosophy">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Philosophy
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../artifacts/" class="md-footer__link md-footer__link--next" aria-label="Next: Artifacts">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Artifacts
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 AirsStack
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/airsstack" target="_blank" rel="noopener" title="AirsStack on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
